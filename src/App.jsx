@@ -5,6 +5,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Article from './pages/Article'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
