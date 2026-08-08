@@ -17,9 +17,9 @@ function Home() {
                             Agendar cita
                         </Link>
                     </div>
-                    <div className={styles.heroImagen}>
-                        <img src="https://placehold.co/340x450" alt="Dr. Edwin García" />
-                    </div>
+                    {/* <div className={styles.heroImagen}>
+                        <img src="/fondo-inicio.jpg" alt="Dr. Edwin García" />
+                    </div>*/}
                 </div>
             </section>
 

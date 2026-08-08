@@ -7,7 +7,7 @@
     padding: 2rem;
     background-image:
         linear-gradient(rgba(1, 15, 28, 0.7), rgba(29, 98, 95, 0.7)),
-        url('https://placehold.co/1600x900');
+        url('/fondo-inicio.jpg');
     background-size: cover;
     background-position: center;
     color: white;
