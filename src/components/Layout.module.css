@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #0d3b66;
+    background-color: var(--color-claro);
 }
 
 .logo {
@@ -15,7 +15,7 @@
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
     display: block;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .enlaces a {
-    color: white;
+    color: var(--color-profundo);
     font-weight: 500;
     transition: opacity 0.2s;
 }

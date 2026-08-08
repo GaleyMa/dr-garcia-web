@@ -1,3 +1,22 @@
+:root {
+  --color-principal: #1D625F;
+  /* teal medio — color de marca */
+  --color-profundo: #093A3F;
+  /* teal profundo */
+  --color-oscuro: #010F1C;
+  /* casi negro — fondos oscuros */
+  --color-acento: #3C8089;
+  /* teal claro — detalles */
+  --color-coral: #E07A5F;
+  /* acento cálido — botones y enlaces */
+  --color-claro: #F1F4F5;
+  /* fondo claro */
+  --color-gris: #A2B6B8;
+  /* gris-teal — texto secundario */
+  --color-seccion-alt: #f5f7fa;
+  /* gris de secciones alternas */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +45,7 @@ a {
 
 .tituloSeccion {
   font-size: 2rem;
-  color: #0d3b66;
+  color: var(--color-principal);
   text-align: center;
   margin-bottom: 3rem;
 }

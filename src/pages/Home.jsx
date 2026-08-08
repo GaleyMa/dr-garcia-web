@@ -23,7 +23,7 @@ function Home() {
                 </div>
             </section>
 
-            {/* Presentación del doctor */}
+            {/* Presentación*/}
             <section className={`${styles.presentacion} seccion`}>
                 <div className="contenedor">
                     <h2 className="tituloSeccion">Experiencia que inspira confianza</h2>
@@ -61,7 +61,24 @@ function Home() {
                     </div>
                 </div>
             </section>
-
+            {/* Ubicación */}
+            <section className={`${styles.ubicacion} seccion`}>
+                <div className="contenedor">
+                    <h2 className="tituloSeccion">Ubicación del consultorio</h2>
+                    <div className={styles.mapa}>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440.00078511281515!2d-116.95267333328579!3d32.53147709553132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d947003fc16575%3A0xaa3bdfc3905b9312!2sTorre%20M%C3%A9dica%20Otay!5e0!3m2!1ses!2smx!4v1786228442649!5m2!1ses!2smx"
+                            width="100%"
+                            height="400"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Ubicación del consultorio del Dr. Edwin García"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
             {/* Temas de salud (blog) */}
             <section className={`${styles.blog} seccion`}>
                 <div className="contenedor">

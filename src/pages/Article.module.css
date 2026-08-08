@@ -1,20 +1,85 @@
-.titulo {
-    color: #0d3b66;
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
+/* Encabezado con foto */
+.intro {
+    background: linear-gradient(135deg, #010F1C 0%, #1D625F 100%);
+    color: white;
 }
 
-.contenido p {
+.introGrid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.introFoto img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.introTexto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* Bloques de contenido */
+.bloque {
+    background: white;
+}
+
+.bloqueAlt {
+    background-color: #f5f7fa;
+}
+
+.encabezado {
+    font-size: 1.6rem;
+    color: #1D625F;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-bottom: 3px solid #E07A5F;
+    padding-bottom: 0.4rem;
+}
+
+.parrafo {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 1.5rem;
     max-width: 720px;
+    margin-bottom: 1.25rem;
 }
 
-.volver {
-    display: inline-block;
-    margin-top: 2rem;
-    color: #0d3b66;
+/* Idiomas */
+.idiomas {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.idioma {
+    border: 2px solid #3C8089;
+    color: #1D625F;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
     font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .introGrid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .introFoto {
+        display: flex;
+        justify-content: center;
+    }
 }

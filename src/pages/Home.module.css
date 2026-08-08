@@ -1,3 +1,4 @@
+/* Hero */
 .hero {
     position: relative;
     min-height: 80vh;
@@ -5,7 +6,7 @@
     align-items: center;
     padding: 2rem;
     background-image:
-        linear-gradient(rgba(13, 59, 102, 0.75), rgba(13, 59, 102, 0.75)),
+        linear-gradient(rgba(1, 15, 28, 0.7), rgba(29, 98, 95, 0.7)),
         url('https://placehold.co/1600x900');
     background-size: cover;
     background-position: center;
@@ -38,21 +39,6 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* En pantallas chicas, las columnas se apilan */
-@media (max-width: 768px) {
-    .heroContenido {
-        grid-template-columns: 1fr;
-    }
-
-    .heroTexto {
-        text-align: center;
-    }
-
-    .heroImagen {
-        order: -1;
-    }
-}
-
 .nombre {
     font-size: 3rem;
     font-weight: 700;
@@ -67,18 +53,21 @@
     max-width: 500px;
 }
 
+/* Botón: contorno coral sutil, se rellena al pasar el mouse */
 .boton {
     display: inline-block;
     padding: 0.85rem 2rem;
-    background-color: white;
-    color: #0d3b66;
+    background-color: transparent;
+    color: white;
+    border: 2px solid var(--color-coral);
     border-radius: 6px;
     font-weight: 600;
-    transition: transform 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .boton:hover {
-    transform: translateY(-2px);
+    background-color: var(--color-coral);
+    color: white;
 }
 
 /* Presentación del doctor */
@@ -94,15 +83,15 @@
 }
 
 .enlace {
-    color: #0d3b66;
+    color: var(--color-coral);
     font-weight: 600;
-    border-bottom: 2px solid #0d3b66;
+    border-bottom: 2px solid var(--color-coral);
     padding-bottom: 2px;
 }
 
 /* Servicios destacados */
 .servicios {
-    background-color: #f5f7fa;
+    background-color: var(--color-seccion-alt);
 }
 
 .tarjetas {
@@ -120,7 +109,7 @@
 }
 
 .tarjeta h3 {
-    color: #0d3b66;
+    color: var(--color-principal);
     margin-bottom: 0.75rem;
 }
 
@@ -129,8 +118,9 @@
     font-size: 0.95rem;
 }
 
+/* Temas de salud (blog) */
 .blog {
-    background-color: #f5f7fa;
+    background-color: var(--color-seccion-alt);
 }
 
 .tarjetaBlog {
@@ -148,7 +138,7 @@
 }
 
 .tarjetaBlog h3 {
-    color: #0d3b66;
+    color: var(--color-principal);
     margin-bottom: 0.5rem;
 }
 
@@ -159,13 +149,14 @@
 }
 
 .leerMas {
-    color: #0d3b66;
+    color: var(--color-coral);
     font-weight: 600;
     font-size: 0.9rem;
 }
 
+/* Cierre / llamada a la acción */
 .cta {
-    background: linear-gradient(135deg, #0d3b66 0%, #144d85 100%);
+    background: linear-gradient(135deg, var(--color-oscuro) 0%, var(--color-principal) 100%);
     color: white;
     text-align: center;
     padding: 5rem 2rem;
@@ -181,4 +172,35 @@
     opacity: 0.9;
     max-width: 500px;
     margin: 0 auto 2rem;
+}
+
+/* Responsive del hero */
+@media (max-width: 768px) {
+    .heroContenido {
+        grid-template-columns: 1fr;
+    }
+
+    .heroTexto {
+        text-align: center;
+    }
+
+    .heroImagen {
+        order: -1;
+    }
+}
+
+.ubicacion {
+    background: white;
+}
+
+.mapa {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    line-height: 0;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
 }

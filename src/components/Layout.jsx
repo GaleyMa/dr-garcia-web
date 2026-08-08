@@ -7,7 +7,7 @@ function Layout() {
         <>
             <nav className={styles.nav}>
                 <Link to="/" className={styles.logo}>
-                    <img src="/logo.png" alt="Dr. Edwin García" />
+                    <img src="/logo-barra-principal.png" alt="Dr. Edwin García" />
                 </Link>
 
                 <div className={styles.enlaces}>
