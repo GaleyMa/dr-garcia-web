@@ -9,9 +9,9 @@ function Home() {
             <section className={styles.hero}>
                 <div className={styles.heroContenido}>
                     <div className={styles.heroTexto}>
-                        <h1 className={styles.nombre}>Dr. Edwin García</h1>
+                        <h1 className={styles.nombre}>Cirujano Especialista <br />en Tijuana</h1>
                         <p className={styles.especialidad}>
-                            Cirujano especialista en Tijuana. Atención personalizada y profesional.
+                            Atención personalizada y profesional
                         </p>
                         <Link to="/contacto" className={styles.boton}>
                             Agendar cita
