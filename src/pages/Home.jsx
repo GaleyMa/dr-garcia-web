@@ -31,7 +31,7 @@ function Home() {
                         Cada paciente es único, y merece ser escuchado. Como cirujano general, me comprometo a explicarte tu diagnóstico con claridad y a acompañarte en cada paso, desde la primera consulta hasta tu recuperación.
                     </p>
                     <Link to="/sobre-el-doctor" className={styles.enlace}>
-                        Conoce más sobre mi
+                        Conoce más sobre mí
                     </Link>
                 </div>
             </section>
