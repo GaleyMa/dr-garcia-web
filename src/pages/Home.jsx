@@ -26,12 +26,12 @@ function Home() {
             {/* Presentación*/}
             <section className={`${styles.presentacion} seccion`}>
                 <div className="contenedor">
-                    <h2 className="tituloSeccion">Experiencia que inspira confianza</h2>
+                    <h2 className="tituloSeccion">Claridad en cada paso</h2>
                     <p>
-                        blablablablablablablablablablablablablablablablablabla
+                        Cada paciente es único, y merece ser escuchado. Como cirujano general, me comprometo a explicarte tu diagnóstico con claridad y a acompañarte en cada paso, desde la primera consulta hasta tu recuperación.
                     </p>
                     <Link to="/sobre-el-doctor" className={styles.enlace}>
-                        Conoce más sobre el doctor
+                        Conoce más sobre mi
                     </Link>
                 </div>
             </section>
