@@ -55,6 +55,31 @@ function ServiceDetail() {
                     <Link to="/contacto" className={styles.boton}>Agendar consulta</Link>
                 </div>
             </section>
+            <section className={`${styles.bloqueAlt} seccion`}>
+                <div className="contenedor">
+                    <h2 className={styles.encabezado}>Riesgos</h2>
+                    <p className={styles.parrafo}>{servicio.riesgo}</p>
+                </div>
+            </section>
+            <section className={`${styles.bloque} seccion`}>
+                <div className="contenedor">
+                    <h2 className={styles.encabezado}>Preparación</h2>
+                    <p className={styles.parrafo}>{servicio.preparacion}</p>
+                </div>
+            </section>
+            <section className={`${styles.bloqueAlt} seccion`}>
+                <div className="contenedor">
+                    <h2 className={styles.encabezado}>Recuperación</h2>
+                    <p className={styles.parrafo}>{servicio.recuperacion}</p>
+                </div>
+            </section>
+            <section className={`${styles.bloque} seccion`}>
+                <div className="contenedor">
+                    <h2 className={styles.encabezado}>Resultados</h2>
+                    <p className={styles.parrafo}>{servicio.resultados}</p>
+                    <Link to="/contacto" className={styles.boton}>Agendar consulta</Link>
+                </div>
+            </section>
         </>
     )
 }

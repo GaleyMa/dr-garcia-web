@@ -1,12 +1,16 @@
 export const servicios = [
     {
         slug: 'vesicula',
-        titulo: 'Cirugía de vesícula',
+        titulo: 'Cirugía de vesícula (colecistectomía)',
         imagen: '/servicios/vesicula.jpg',
         resumen: 'Extracción de la vesícula por técnica laparoscópica mínimamente invasiva.',
         queEs: 'Descripcion',
         cuando: 'Señales y síntomas que indican que se necesita.',
         procedimiento: 'Cómo se realiza el procedimiento. ',
+        riesgo: 'Riesgos y complicaciones posibles.',
+        preparacion: 'Preparación antes del procedimiento.',
+        recuperacion: 'Recuperación y cuidados posteriores.',
+        resultados: 'Resultados esperados y seguimiento.',
     },
     {
         slug: 'hernias',
@@ -16,6 +20,10 @@ export const servicios = [
         queEs: 'Descripción de qué es la cirugía de hernias.',
         cuando: 'Señales y síntomas que indican que se necesita. ',
         procedimiento: 'Cómo se realiza el procedimiento.',
+        riesgo: 'Riesgos y complicaciones posibles.',
+        preparacion: 'Preparación antes del procedimiento.',
+        recuperacion: 'Recuperación y cuidados posteriores.',
+        resultados: 'Resultados esperados y seguimiento.',
     },
     {
         slug: 'lipomas',
@@ -25,6 +33,10 @@ export const servicios = [
         queEs: 'Descripción de qué son los lipomas y su tratamiento.',
         cuando: 'Cuándo conviene extraerlos. ',
         procedimiento: 'Cómo se realiza el procedimiento.',
+        riesgo: 'Riesgos y complicaciones posibles.',
+        preparacion: 'Preparación antes del procedimiento.',
+        recuperacion: 'Recuperación y cuidados posteriores.',
+        resultados: 'Resultados esperados y seguimiento.',
     },
     {
         slug: 'tiroides',
@@ -34,6 +46,10 @@ export const servicios = [
         queEs: 'Descripción de la cirugía de tiroides. ',
         cuando: 'Señales y síntomas que indican que se necesita.',
         procedimiento: 'Cómo se realiza el procedimiento. ',
+        riesgo: 'Riesgos y complicaciones posibles.',
+        preparacion: 'Preparación antes del procedimiento.',
+        recuperacion: 'Recuperación y cuidados posteriores.',
+        resultados: 'Resultados esperados y seguimiento.',
     },
     {
         slug: 'trauma-urgencias',
@@ -43,5 +59,9 @@ export const servicios = [
         queEs: 'Descripción de la atención de trauma y urgencias.',
         cuando: 'Situaciones que requieren atención urgente. ',
         procedimiento: 'Cómo se maneja. ',
+        riesgo: 'Riesgos y complicaciones posibles.',
+        preparacion: 'Preparación antes del procedimiento.',
+        recuperacion: 'Recuperación y cuidados posteriores.',
+        resultados: 'Resultados esperados y seguimiento.',
     },
 ]
