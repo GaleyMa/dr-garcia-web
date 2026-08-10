@@ -35,7 +35,7 @@
 }
 
 .heroTitulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1.1;
 }
@@ -106,7 +106,7 @@
 
 .lead {
     font-family: var(--font-titulos);
-    font-size: 1.7rem;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.4;
     color: var(--color-principal);

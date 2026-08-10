@@ -6,6 +6,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Article from './pages/Article'
 import { Analytics } from "@vercel/analytics/react"
+import ServiceDetail from './pages/ServiceDetail'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="sobre-mi" element={<About />} />
         <Route path="servicios" element={<Services />} />
+        <Route path="servicios/:slug" element={<ServiceDetail />} />
         <Route path="contacto" element={<Contact />} />
         <Route path="blog/:slug" element={<Article />} />
       </Route>

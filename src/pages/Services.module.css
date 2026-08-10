@@ -1,0 +1,95 @@
+.eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-coral);
+    margin-bottom: 0.5rem;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    margin-bottom: 0.75rem;
+}
+
+.intro {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    display: block;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #dde5e5;
+    box-shadow: 0 4px 16px rgba(1, 15, 28, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(1, 15, 28, 0.12);
+}
+
+.tarjeta h2 {
+    font-size: 1.3rem;
+    color: var(--color-principal);
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #dde5e5;
+    box-shadow: 0 4px 16px rgba(1, 15, 28, 0.06);
+    overflow: hidden;
+    /* recorta la imagen a las esquinas redondeadas */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(1, 15, 28, 0.12);
+}
+
+.tarjetaImg {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    /* llena sin deformar */
+    display: block;
+}
+
+.tarjetaTexto {
+    padding: 1.5rem;
+}
+
+.tarjeta h2 {
+    font-size: 1.3rem;
+    color: var(--color-principal);
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.leerMas {
+    color: var(--color-coral);
+    font-weight: 600;
+    font-size: 0.9rem;
+}

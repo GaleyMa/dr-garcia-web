@@ -50,6 +50,7 @@
 .enlaces {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .enlaces a {
@@ -57,7 +58,7 @@
     color: var(--color-profundo);
     font-weight: 600;
     padding: 0.5rem 1rem;
-    border-radius: 6px;
+    border-radius: 2px;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -65,4 +66,38 @@
     opacity: 0.9;
     color: white;
     background-color: var(--color-principal);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(1, 15, 28, 0.15);
+    padding: 0.5rem 0;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.dropdownItem {
+    padding: 0.65rem 1.25rem;
+    color: var(--color-principal) !important;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: background-color 0.15s;
+}
+
+.dropdownItem:hover {
+    background-color: var(--color-seccion-alt);
+    color: white !important;
 }

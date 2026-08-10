@@ -1,8 +1,12 @@
 import { Link, Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import styles from './Layout.module.css'
+import { useState } from 'react'
+import { servicios } from '../data/servicios'
 
 function Layout() {
+    const [menuAbierto, setMenuAbierto] = useState(false)
+
     return (
         <>
             <div className={styles.topbar}>
@@ -22,8 +26,30 @@ function Layout() {
 
                 <div className={styles.enlaces}>
                     <Link to="/">Inicio</Link>
-                    <Link to="/sobre-mi">Sobre mi</Link>
-                    <Link to="/servicios">Servicios</Link>
+                    <Link to="/sobre-mi">Sobre mí</Link>
+
+                    <div
+                        className={styles.dropdown}
+                        onMouseEnter={() => setMenuAbierto(true)}
+                        onMouseLeave={() => setMenuAbierto(false)}
+                    >
+                        <Link to="/servicios">Servicios</Link>
+
+                        {menuAbierto && (
+                            <div className={styles.dropdownMenu}>
+                                {servicios.map((s) => (
+                                    <Link
+                                        key={s.slug}
+                                        to={`/servicios/${s.slug}`}
+                                        className={styles.dropdownItem}
+                                    >
+                                        {s.titulo}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
                     <Link to="/contacto">Contacto</Link>
                 </div>
             </nav>
