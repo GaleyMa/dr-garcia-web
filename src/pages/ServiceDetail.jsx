@@ -52,7 +52,6 @@ function ServiceDetail() {
                 <div className="contenedor">
                     <h2 className={styles.encabezado}>El procedimiento</h2>
                     <p className={styles.parrafo}>{servicio.procedimiento}</p>
-                    <Link to="/contacto" className={styles.boton}>Agendar consulta</Link>
                 </div>
             </section>
             <section className={`${styles.bloqueAlt} seccion`}>
