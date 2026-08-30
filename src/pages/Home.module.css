@@ -58,16 +58,39 @@
 }
 
 .heroImagen img {
-    width: 100%;
-    max-width: 340px;
+    width: 380px;
+    height: 500px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .nombre {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 1.12;
     margin-bottom: 0.8rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.acento {
+    color: var(--color-coral);
 }
 
 .especialidad {

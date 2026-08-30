@@ -9,17 +9,24 @@ function Home() {
             <section className={styles.hero}>
                 <div className={styles.heroContenido}>
                     <div className={styles.heroTexto}>
-                        <h1 className={styles.nombre}>Cirujano Especialista <br />en Tijuana</h1>
+                        <span className={styles.badge}>
+                            ✓ Certificado por el Consejo Mexicano de Cirugía General
+                        </span>
+                        <h1 className={styles.nombre}>
+                            Cirugía General y Laparoscópica de <span className={styles.acento}>Mínima Invasión</span> en Tijuana
+                        </h1>
                         <p className={styles.especialidad}>
-                            Atención personalizada y profesional
+                            Procedimientos seguros, menor dolor y rápida recuperación. Atención especializada y cercana.
                         </p>
                         <Link to="/contacto" className={styles.boton}>
                             Agendar cita
                         </Link>
+
                     </div>
-                    {/* <div className={styles.heroImagen}>
-                        <img src="/fondo-inicio.jpg" alt="Dr. Edwin García" />
-                    </div>*/}
+
+                    <div className={styles.heroImagen}>
+                        <img src="/doc3.png" alt="Dr. Edwin García, cirujano general y laparoscópico" />
+                    </div>
                 </div>
             </section>
 

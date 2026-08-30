@@ -6,8 +6,10 @@ import { servicios } from '../data/servicios'
 
 function Layout() {
     const [menuAbierto, setMenuAbierto] = useState(false)
+    const [menuMovil, setMenuMovil] = useState(false)
 
     return (
+
         <>
             <div className={styles.topbar}>
                 <div className={styles.topbarContenido}>
@@ -24,16 +26,26 @@ function Layout() {
                     <img src="/logo-barra-principal.png" alt="Dr. Edwin García" />
                 </Link>
 
-                <div className={styles.enlaces}>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/sobre-mi">Sobre mí</Link>
+                <button
+                    className={styles.hamburguesa}
+                    onClick={() => setMenuMovil(!menuMovil)}
+                    aria-label="Abrir menú"
+                >
+                    {menuMovil ? '✕' : '☰'}
+                </button>
 
+                {/* Enlaces: se muestran/ocultan en móvil según menuMovil */}
+                <div className={`${styles.enlaces} ${menuMovil ? styles.enlacesAbierto : ''}`}>
+                    <Link to="/" onClick={() => setMenuMovil(false)}>Inicio</Link>
+                    <Link to="/sobre-mi" onClick={() => setMenuMovil(false)}>Sobre mí</Link>
+
+                    {/* Dropdown de servicios (solo aplica en escritorio) */}
                     <div
                         className={styles.dropdown}
                         onMouseEnter={() => setMenuAbierto(true)}
                         onMouseLeave={() => setMenuAbierto(false)}
                     >
-                        <Link to="/servicios">Servicios</Link>
+                        <Link to="/servicios" onClick={() => setMenuMovil(false)}>Servicios</Link>
 
                         {menuAbierto && (
                             <div className={styles.dropdownMenu}>
@@ -49,8 +61,10 @@ function Layout() {
                             </div>
                         )}
                     </div>
+                    <Link to="/contacto" className={styles.botonCita}>
+                        Agendar cita
+                    </Link>
 
-                    <Link to="/contacto">Contacto</Link>
                 </div>
             </nav>
 

@@ -29,7 +29,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #f4f7f7;
+    background-color: rgba(244, 247, 247, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
     border-bottom: 1px solid #dde5e5;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
@@ -53,19 +57,23 @@
     align-items: center;
 }
 
-.enlaces a {
-    font-size: 1.2rem;
-    color: var(--color-profundo);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 2px;
-    transition: background-color 0.2s, color 0.2s;
+.enlaces a:not(.botonCita) {
+    position: relative;
 }
 
-.enlaces a:hover {
-    opacity: 0.9;
-    color: white;
-    background-color: var(--color-principal);
+.enlaces a:not(.botonCita)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-coral);
+    transition: width 0.25s ease;
+}
+
+.enlaces a:not(.botonCita):hover::after {
+    width: 100%;
 }
 
 .dropdown {
@@ -77,10 +85,10 @@
 
 .dropdownMenu {
     position: absolute;
-    top: 100%;
+    top: 130%;
     left: 0;
-    background: white;
-    border-radius: 8px;
+    background: var(--color-claro);
+    border-radius: 0px;
     box-shadow: 0 8px 24px rgba(1, 15, 28, 0.15);
     padding: 0.5rem 0;
     min-width: 220px;
@@ -99,5 +107,70 @@
 
 .dropdownItem:hover {
     background-color: var(--color-seccion-alt);
-    color: white !important;
+
+}
+
+/* Botón hamburguesa: oculto por defecto (escritorio) */
+.hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: var(--color-principal);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.enlaces .botonCita {
+    background-color: var(--color-coral);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 10px;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.enlaces .botonCita:hover {
+    opacity: 0.85;
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 768px) {
+    .hamburguesa {
+        display: block;
+        /* aparece el botón */
+    }
+
+    .enlaces {
+        display: none;
+        /* ocultamos los enlaces por defecto */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--color-crema);
+        padding: 1rem 2rem;
+        gap: 1rem;
+        box-shadow: 0 8px 20px rgba(1, 15, 28, 0.1);
+        border-top: 1px solid #e3dccb;
+    }
+
+    .enlacesAbierto {
+        display: flex;
+        /* al tocar ☰, se muestran apilados */
+    }
+
+    /* En móvil, el dropdown de servicios no flota; es un enlace normal */
+    .dropdownMenu {
+        display: none;
+    }
+
+    /* La barra necesita ser el punto de referencia del menú desplegable */
+    .nav {
+        position: relative;
+    }
 }

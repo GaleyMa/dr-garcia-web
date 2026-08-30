@@ -7,7 +7,7 @@ function About() {
             <section className={styles.hero}>
                 <div className={`contenedor ${styles.heroGrid}`}>
                     <div className={styles.heroFoto}>
-                        <img src="/doc.jpeg" alt="Dr. Edwin García" />
+                        <img src="/doc2.jpeg" alt="Dr. Edwin García" />
                     </div>
                     <div className={styles.heroTexto}>
                         <span className={styles.eyebrow}>Cirujano General Certificado</span>
