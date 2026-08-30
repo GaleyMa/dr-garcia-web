@@ -166,14 +166,11 @@
 .tarjetaBlog {
     display: block;
     padding: 1.75rem;
-    border-radius: 0px;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 15px;
 
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s, box-shadow 0.2s;
-    background: linear-gradient(135deg, var(--color-claro) 10%, var(--color-beige) 90%);
-
+    background-color: white;
 }
 
 .tarjetaBlog:hover {
