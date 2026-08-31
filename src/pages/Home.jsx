@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import { articulos } from '../data/articulos'
+import { IconVaccine, IconStethoscope, IconHeartbeat, IconActivity, IconAmbulance } from '@tabler/icons-react'
+import { servicios } from '../data/servicios'
 
 function Home() {
     return (
@@ -46,24 +48,48 @@ function Home() {
             {/* Servicios destacados */}
             <section className={`${styles.servicios} seccion`}>
                 <div className="contenedor">
-                    <h2 className={`tituloSeccion ${styles.tituloClaro}`}>Servicios principales</h2>
-                    <div className={styles.tarjetas}>
-                        <div className={styles.tarjeta}>
-                            <h3>Cirugía general</h3>
-                            <p>Procedimientos seguros con recuperación acompañada.</p>
+                    <h2 className="tituloSeccion">Servicios principales</h2>
+                    <p className={styles.serviciosIntro}>
+                        Atención quirúrgica especializada, centrada en tu bienestar y recuperación.
+                    </p>
+
+                    <div className={styles.serviciosGrid}>
+                        {/* Columna izquierda */}
+                        <Link to={`/servicios/${servicios[0].slug}`} className={`${styles.tarjeta} ${styles.pos1}`}>
+                            <div className={styles.iconoWrap}><IconVaccine stroke={1.5} /></div>
+                            <h3>{servicios[0].titulo}</h3>
+                            <p>{servicios[0].resumen}</p>
+                        </Link>
+
+                        <Link to={`/servicios/${servicios[1].slug}`} className={`${styles.tarjeta} ${styles.pos2}`}>
+                            <div className={styles.iconoWrap}><IconStethoscope stroke={1.5} /></div>
+                            <h3>{servicios[1].titulo}</h3>
+                            <p>{servicios[1].resumen}</p>
+                        </Link>
+
+                        {/* Imagen central */}
+                        <div className={`${styles.serviciosImg} ${styles.posImg}`}>
+                            <img src="https://placehold.co/500x700" alt="Atención del Dr. Edwin García" />
                         </div>
-                        <div className={styles.tarjeta}>
-                            <h3>Laparoscopía</h3>
-                            <p>Técnicas mínimamente invasivas y menor tiempo de recuperación.</p>
-                        </div>
-                        <div className={styles.tarjeta}>
-                            <h3>Consulta especializada</h3>
-                            <p>Valoración personalizada para tu caso particular.</p>
-                        </div>
-                    </div>
-                    <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-                        <Link to="/servicios" className={styles.enlace}>
-                            Ver todos los servicios
+
+                        {/* Columna derecha */}
+                        <Link to={`/servicios/${servicios[2].slug}`} className={`${styles.tarjeta} ${styles.pos3}`}>
+                            <div className={styles.iconoWrap}><IconHeartbeat stroke={1.5} /></div>
+                            <h3>{servicios[2].titulo}</h3>
+                            <p>{servicios[2].resumen}</p>
+                        </Link>
+
+                        <Link to={`/servicios/${servicios[3].slug}`} className={`${styles.tarjeta} ${styles.pos4}`}>
+                            <div className={styles.iconoWrap}><IconActivity stroke={1.5} /></div>
+                            <h3>{servicios[3].titulo}</h3>
+                            <p>{servicios[3].resumen}</p>
+                        </Link>
+
+                        {/* Quinto, ancho abajo */}
+                        <Link to={`/servicios/${servicios[4].slug}`} className={`${styles.tarjeta} ${styles.pos5}`}>
+                            <div className={styles.iconoWrap}><IconAmbulance stroke={1.5} /></div>
+                            <h3>{servicios[4].titulo}</h3>
+                            <p>{servicios[4].resumen}</p>
                         </Link>
                     </div>
                 </div>
