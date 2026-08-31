@@ -32,13 +32,21 @@ function Home() {
                 </div>
             </section>
 
-            {/* Presentación*/}
+            {/* Presentación */}
             <section className={`${styles.presentacion} seccion`}>
                 <div className="contenedor">
-                    <h2 className="tituloSeccion">Claridad en cada paso</h2>
-                    <p>
-                        Cada paciente es único, y merece ser escuchado. Como cirujano general, me comprometo a explicarte tu diagnóstico con claridad y a acompañarte en cada paso, desde la primera consulta hasta tu recuperación.
-                    </p>
+                    <span className={styles.presentacionEyebrow}>Mi filosofía</span>
+                    <blockquote className={styles.cita}>
+                        <p className={styles.citaTexto}>
+                            Cada paciente merece ser escuchado. Mi compromiso es explicarte tu
+                            diagnóstico con claridad y acompañarte en cada paso, desde la primera
+                            consulta hasta tu recuperación.
+                        </p>
+                        <footer className={styles.citaAutor}>
+                            <span className={styles.citaNombre}>Dr. Edwin García</span>
+                            <span className={styles.citaRol}>Cirujano General</span>
+                        </footer>
+                    </blockquote>
                     <Link to="/sobre-mi" className={styles.enlace}>
                         Conoce más sobre mí
                     </Link>

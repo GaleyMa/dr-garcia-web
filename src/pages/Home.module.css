@@ -120,6 +120,69 @@
 
 .presentacion {
     text-align: center;
+    background-color: #ffffff;
+    background-image: radial-gradient(#e8eded 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.presentacionEyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-coral);
+    margin-bottom: 2rem;
+}
+
+.cita {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Comilla decorativa grande de fondo */
+.cita::before {
+    content: '\201C';
+    /* comilla de apertura “ */
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Georgia, serif;
+    font-size: 6rem;
+    color: var(--color-coral);
+    opacity: 0.25;
+    line-height: 1;
+}
+
+.citaTexto {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--color-principal);
+    font-family: var(--font-titulos);
+    margin-bottom: 1.5rem;
+}
+
+.citaAutor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.citaNombre {
+    font-weight: 700;
+    color: var(--color-principal);
+    font-size: 1.05rem;
+}
+
+.citaRol {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-acento);
 }
 
 .enlace {

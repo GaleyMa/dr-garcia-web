@@ -16,8 +16,8 @@
   /* gris-teal — texto secundario */
   --color-seccion-alt: #f5f7fa;
   /* gris de secciones alternas */
-  --font-titulos: 'Nunito', sans-serif;
-  --font-cuerpo: 'Nunito Sans', system-ui, sans-serif;
+  --font-titulos: 'Inter', sans-serif;
+  --font-cuerpo: 'Source Sans 3', system-ui, sans-serif;
 }
 
 * {
@@ -40,6 +40,7 @@ a,
 span,
 li {
   font-family: var(--font-cuerpo);
+  letter-spacing: 0.04em;
 }
 
 a {
