@@ -13,6 +13,8 @@ function About() {
   return (
     <>
       <section className={styles.hero}>
+        <img className={styles.heroBackground} src="/doc2.jpeg" alt="" aria-hidden="true" />
+        <div className={styles.heroOverlay} />
         <div className={`contenedor ${styles.heroGrid}`}>
           <div className={styles.heroTexto}>
             <span className={styles.kicker}>Cirugía General · Tijuana</span>
@@ -24,9 +26,6 @@ function About() {
             </div>
             <Link to="/contacto" className={styles.heroCta}>Consultar disponibilidad</Link>
           </div>
-          <figure className={styles.heroFoto}>
-            <img src="/doc2.jpeg" alt="Dr. Edwin García Garrido, Cirujano General en Tijuana" />
-          </figure>
         </div>
       </section>
 
