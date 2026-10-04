@@ -7,10 +7,14 @@ import Contact from './pages/Contact'
 import Article from './pages/Article'
 import { Analytics } from "@vercel/analytics/react"
 import ServiceDetail from './pages/ServiceDetail'
+import SEO from './components/SEO'
+import StructuredData from './components/StructuredData'
 
 function App() {
   return (
     <>
+      <SEO />
+      <StructuredData />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
