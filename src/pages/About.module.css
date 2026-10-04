@@ -129,141 +129,202 @@
   line-height: 1.85;
 }
 
-.credenciales {
-  background: #f5f7f6;
+.trayectoria {
+  position: relative;
+  overflow: hidden;
+  background: white;
 }
 
-.sectionHead {
-  max-width: 760px;
-  margin-bottom: 3.2rem;
+.trayectoria::before {
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  left: -190px;
+  top: 90px;
+  border: 1px solid #dce5e4;
+  border-radius: 50%;
+  box-shadow: 0 0 0 55px white, 0 0 0 56px #edf1f0;
+  pointer-events: none;
 }
 
-.certificacionPrincipal {
-  padding: 2.5rem 0 3rem;
-  border-top: 1px solid #cbd4d3;
-  border-bottom: 1px solid #cbd4d3;
-}
-
-.credEyebrow {
-  display: block;
-  margin-bottom: 1.25rem;
-  color: var(--color-coral);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-}
-
-.certificacionContenido {
+.trayectoriaGrid {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
-  gap: 3rem;
-  align-items: end;
+  grid-template-columns: minmax(270px, .78fr) minmax(0, 1.22fr);
+  gap: 7rem;
 }
 
-.certificacionContenido h3 {
+.trayectoriaIntro h2 {
   margin: 0;
-  max-width: 700px;
   color: var(--color-principal);
-  font-family: var(--font-titulos);
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
   line-height: 1.05;
   letter-spacing: -1px;
 }
 
-.certificacionNumero {
-  color: #657373;
-  font-family: var(--font-titulos);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-align: right;
+.sello {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  max-width: 360px;
 }
 
-.cedulasGrid {
+.selloAnillo {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  place-items: center;
+  border: 1px solid var(--color-coral);
+  border-radius: 50%;
+  color: var(--color-coral);
+  font-family: var(--font-titulos);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  position: relative;
 }
 
-.cedulaEditorial {
-  padding: 2.2rem 0 0;
+.selloAnillo::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(190, 103, 84, .45);
+  border-radius: 50%;
 }
 
-.cedulaEditorial:first-child {
-  padding-right: 3rem;
-  border-right: 1px solid #cbd4d3;
+.sello div {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
 }
 
-.cedulaEditorial:last-child {
-  padding-left: 3rem;
-}
-
-.cedulaEditorial strong {
-  display: block;
-  margin-bottom: .6rem;
+.sello strong {
   color: var(--color-principal);
   font-family: var(--font-titulos);
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  letter-spacing: -.5px;
+  line-height: 1.25;
 }
 
-.cedulaEditorial p {
-  margin: 0;
-  max-width: 420px;
-  color: #657373;
-  line-height: 1.6;
-}
-
-.trayectoria {
-  background: white;
-}
-
-.trayectoriaGrid {
-  display: grid;
-  grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr);
-  gap: 7rem;
+.sello div span,
+.sello small {
+  color: #697777;
+  line-height: 1.4;
 }
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
-  border-left: 1px solid #ccd6d5;
+  padding-left: 2.2rem;
+  border-left: 1px solid #cbd6d5;
 }
 
 .timelineItem {
+  min-height: 150px;
   position: relative;
-  padding: 0 0 3.3rem 1.2rem;
+  padding: .1rem 5rem 3.5rem 1.5rem;
 }
 
 .timelineItem:last-child {
-  padding-bottom: 0;
+  min-height: 0;
+  padding-bottom: .5rem;
 }
 
 .dot {
   position: absolute;
-  left: -2.38rem;
-  top: .25rem;
+  left: -2.58rem;
+  top: .28rem;
   width: .72rem;
   height: .72rem;
   border-radius: 50%;
   background: var(--color-coral);
-  box-shadow: 0 0 0 6px white;
+  box-shadow: 0 0 0 7px white;
+}
+
+.timelineNumero {
+  position: absolute;
+  right: 0;
+  top: -1.25rem;
+  color: #edf1f0;
+  font-family: var(--font-titulos);
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1;
+  z-index: 0;
+}
+
+.timelineTipo,
+.timelineItem h3,
+.timelineItem p {
+  position: relative;
+  z-index: 1;
 }
 
 .timelineTipo {
+  display: inline-block;
+  margin-bottom: .65rem;
   color: var(--color-coral);
-  margin-bottom: .7rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .timelineItem h3 {
-  margin: 0 0 .55rem;
+  max-width: 620px;
+  margin: 0 0 .5rem;
   color: var(--color-principal);
   font-size: 1.35rem;
+  line-height: 1.3;
 }
 
 .timelineItem p {
   margin: 0;
   color: #687676;
+}
+
+.cedulasBar {
+  position: relative;
+  margin-top: 4.5rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid #cbd6d5;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cedulasBar div {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+}
+
+.cedulasBar div span {
+  color: #758181;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.cedulasBar strong {
+  color: var(--color-principal);
+  font-family: var(--font-titulos);
+  font-size: 1.05rem;
+}
+
+.cedulaSeparador {
+  width: 1px;
+  height: 24px;
+  background: #cbd6d5;
+}
+
+.cedulaMarca {
+  margin-left: auto;
+  color: #a7b2b1;
+  font-family: var(--font-titulos);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 .areas {
@@ -465,5 +526,51 @@
 
   .cedulaEditorial:last-child {
     padding-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .trayectoriaGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .sello {
+    margin-top: 2rem;
+  }
+
+  .cedulasBar {
+    flex-wrap: wrap;
+  }
+
+  .cedulaMarca {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .trayectoria::before {
+    display: none;
+  }
+
+  .timelineItem {
+    padding-right: 1rem;
+  }
+
+  .timelineNumero {
+    font-size: 3.8rem;
+  }
+
+  .cedulasBar,
+  .cedulasBar div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .45rem;
+  }
+
+  .cedulaSeparador {
+    width: 100%;
+    height: 1px;
   }
 }
