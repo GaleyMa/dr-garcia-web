@@ -9,6 +9,9 @@ import { Analytics } from "@vercel/analytics/react"
 import ServiceDetail from './pages/ServiceDetail'
 import SEO from './components/SEO'
 import StructuredData from './components/StructuredData'
+import GeneralSurgery from './pages/GeneralSurgery'
+import FAQ from './pages/FAQ'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
           <Route path="sobre-mi" element={<Navigate to="/dr-edwin-garcia-garrido" replace />} />
 
           <Route path="servicios" element={<Services />} />
+          <Route path="cirugia-general" element={<GeneralSurgery />} />
+          <Route path="preguntas-frecuentes" element={<FAQ />} />
           <Route path=":slug" element={<ServiceDetail />} />
 
           {/* Compatibilidad temporal con las URLs anteriores */}
@@ -29,6 +34,7 @@ function App() {
 
           <Route path="contacto" element={<Contact />} />
           <Route path="blog/:slug" element={<Article />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <Analytics />
