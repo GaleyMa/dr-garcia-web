@@ -5,7 +5,6 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Article from './pages/Article'
 import { Analytics } from "@vercel/analytics/react"
-import ServiceDetail from './pages/ServiceDetail'
 import SEO from './components/SEO'
 import StructuredData from './components/StructuredData'
 import GeneralSurgery from './pages/GeneralSurgery'
@@ -37,8 +36,13 @@ function App() {
           <Route path="lipomas" element={<LipomaSurgery />} />
           <Route path="trauma-y-urgencias" element={<TraumaEmergencySurgery />} />
 
-          {/* Compatibilidad temporal con las URLs anteriores */}
-          <Route path="servicios/:slug" element={<ServiceDetail legacy />} />
+          {/* Redirecciones de compatibilidad con las URLs anteriores */}
+          <Route path="servicios/vesicula" element={<Navigate to="/cirugia-de-vesicula" replace />} />
+          <Route path="servicios/hernias" element={<Navigate to="/cirugia-de-hernia" replace />} />
+          <Route path="servicios/tiroides" element={<Navigate to="/cirugia-de-tiroides" replace />} />
+          <Route path="servicios/lipomas" element={<Navigate to="/lipomas" replace />} />
+          <Route path="servicios/trauma-urgencias" element={<Navigate to="/trauma-y-urgencias" replace />} />
+          <Route path="servicios/:slug" element={<Navigate to="/cirugia-general" replace />} />
 
           <Route path="contacto" element={<Contact />} />
           <Route path="blog/:slug" element={<Article />} />
