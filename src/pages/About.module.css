@@ -138,38 +138,80 @@
   margin-bottom: 3.2rem;
 }
 
-.credLista {
+.certificacionPrincipal {
+  padding: 2.5rem 0 3rem;
   border-top: 1px solid #cbd4d3;
-}
-
-.credFila {
-  display: grid;
-  grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
-  gap: 3rem;
-  padding: 1.8rem 0;
   border-bottom: 1px solid #cbd4d3;
 }
 
-.credTipo {
-  color: #687676;
-  font-size: .88rem;
+.credEyebrow {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--color-coral);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
 
-.credFila div {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+.certificacionContenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(180px, .65fr);
+  gap: 3rem;
+  align-items: end;
 }
 
-.credFila strong {
+.certificacionContenido h3 {
+  margin: 0;
+  max-width: 700px;
   color: var(--color-principal);
   font-family: var(--font-titulos);
-  font-size: 1.15rem;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -1px;
 }
 
-.credFila div span {
-  color: #687676;
+.certificacionNumero {
+  color: #657373;
+  font-family: var(--font-titulos);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-align: right;
+}
+
+.cedulasGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cedulaEditorial {
+  padding: 2.2rem 0 0;
+}
+
+.cedulaEditorial:first-child {
+  padding-right: 3rem;
+  border-right: 1px solid #cbd4d3;
+}
+
+.cedulaEditorial:last-child {
+  padding-left: 3rem;
+}
+
+.cedulaEditorial strong {
+  display: block;
+  margin-bottom: .6rem;
+  color: var(--color-principal);
+  font-family: var(--font-titulos);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  letter-spacing: -.5px;
+}
+
+.cedulaEditorial p {
+  margin: 0;
+  max-width: 420px;
+  color: #657373;
+  line-height: 1.6;
 }
 
 .trayectoria {
@@ -397,5 +439,31 @@
   .areaFila {
     grid-template-columns: 45px 1fr 30px;
     min-height: 80px;
+  }
+}
+
+@media (max-width: 650px) {
+  .certificacionContenido,
+  .cedulasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificacionContenido {
+    gap: 1.5rem;
+  }
+
+  .certificacionNumero {
+    text-align: left;
+  }
+
+  .cedulaEditorial:first-child {
+    padding-right: 0;
+    padding-bottom: 2rem;
+    border-right: 0;
+    border-bottom: 1px solid #cbd4d3;
+  }
+
+  .cedulaEditorial:last-child {
+    padding-left: 0;
   }
 }
