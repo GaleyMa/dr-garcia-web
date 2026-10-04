@@ -46,20 +46,27 @@ function About() {
         <div className="contenedor">
           <div className={styles.sectionHead}>
             <span className={styles.label}>Credenciales</span>
-            <h2>Información profesional verificable</h2>
+            <h2>Certificación y cédulas profesionales</h2>
           </div>
-          <div className={styles.credLista}>
-            <div className={styles.credFila}>
-              <span className={styles.credTipo}>Certificación</span>
-              <div><strong>Consejo Mexicano de Cirugía General</strong><span>C25016825</span></div>
+
+          <div className={styles.certificacionPrincipal}>
+            <span className={styles.credEyebrow}>Certificación</span>
+            <div className={styles.certificacionContenido}>
+              <h3>Consejo Mexicano<br />de Cirugía General</h3>
+              <span className={styles.certificacionNumero}>C25016825</span>
             </div>
-            <div className={styles.credFila}>
-              <span className={styles.credTipo}>Cédula profesional</span>
-              <div><strong>12992664</strong><span>Universidad Autónoma de Baja California</span></div>
+          </div>
+
+          <div className={styles.cedulasGrid}>
+            <div className={styles.cedulaEditorial}>
+              <span className={styles.credEyebrow}>Cédula profesional</span>
+              <strong>12992664</strong>
+              <p>Universidad Autónoma de Baja California</p>
             </div>
-            <div className={styles.credFila}>
-              <span className={styles.credTipo}>Cédula de especialista</span>
-              <div><strong>14920012</strong><span>Cirugía General · Universidad Juárez Autónoma de Tabasco</span></div>
+            <div className={styles.cedulaEditorial}>
+              <span className={styles.credEyebrow}>Cédula de especialista</span>
+              <strong>14920012</strong>
+              <p>Cirugía General · Universidad Juárez Autónoma de Tabasco</p>
             </div>
           </div>
         </div>
