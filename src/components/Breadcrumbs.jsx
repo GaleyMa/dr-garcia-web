@@ -4,7 +4,6 @@ import styles from './Breadcrumbs.module.css'
 
 const labels = {
   'dr-edwin-garcia-garrido': 'Dr. Edwin García Garrido',
-  servicios: 'Servicios',
   'cirugia-general': 'Cirugía General',
   'preguntas-frecuentes': 'Preguntas frecuentes',
   contacto: 'Contacto',
@@ -21,7 +20,7 @@ function Breadcrumbs() {
   const crumbs = [{ label: 'Inicio', path: '/' }]
 
   if (service) {
-    crumbs.push({ label: 'Servicios', path: '/servicios' })
+    crumbs.push({ label: 'Cirugía General', path: '/cirugia-general' })
     crumbs.push({ label: service.titulo, path: pathname })
   } else {
     let path = ''
