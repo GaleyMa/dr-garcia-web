@@ -12,6 +12,10 @@ import GeneralSurgery from './pages/GeneralSurgery'
 import FAQ from './pages/FAQ'
 import NotFound from './pages/NotFound'
 import GallbladderSurgery from './pages/GallbladderSurgery'
+import HerniaSurgery from './pages/HerniaSurgery'
+import ThyroidSurgery from './pages/ThyroidSurgery'
+import LipomaSurgery from './pages/LipomaSurgery'
+import TraumaEmergencySurgery from './pages/TraumaEmergencySurgery'
 
 function App() {
   return (
@@ -28,7 +32,10 @@ function App() {
           <Route path="cirugia-general" element={<GeneralSurgery />} />
           <Route path="preguntas-frecuentes" element={<FAQ />} />
           <Route path="cirugia-de-vesicula" element={<GallbladderSurgery />} />
-          <Route path=":slug" element={<ServiceDetail />} />
+          <Route path="cirugia-de-hernia" element={<HerniaSurgery />} />
+          <Route path="cirugia-de-tiroides" element={<ThyroidSurgery />} />
+          <Route path="lipomas" element={<LipomaSurgery />} />
+          <Route path="trauma-y-urgencias" element={<TraumaEmergencySurgery />} />
 
           {/* Compatibilidad temporal con las URLs anteriores */}
           <Route path="servicios/:slug" element={<ServiceDetail legacy />} />
