@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -10,16 +10,25 @@ import ServiceDetail from './pages/ServiceDetail'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="sobre-mi" element={<About />} />
-        <Route path="servicios" element={<Services />} />
-        <Route path="servicios/:slug" element={<ServiceDetail />} />
-        <Route path="contacto" element={<Contact />} />
-        <Route path="blog/:slug" element={<Article />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="dr-edwin-garcia-garrido" element={<About />} />
+          <Route path="sobre-mi" element={<Navigate to="/dr-edwin-garcia-garrido" replace />} />
+
+          <Route path="servicios" element={<Services />} />
+          <Route path=":slug" element={<ServiceDetail />} />
+
+          {/* Compatibilidad temporal con las URLs anteriores */}
+          <Route path="servicios/:slug" element={<ServiceDetail legacy />} />
+
+          <Route path="contacto" element={<Contact />} />
+          <Route path="blog/:slug" element={<Article />} />
+        </Route>
+      </Routes>
+      <Analytics />
+    </>
   )
 }
 
