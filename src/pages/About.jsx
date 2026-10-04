@@ -7,11 +7,11 @@ function About() {
             <section className={styles.hero}>
                 <div className={`contenedor ${styles.heroGrid}`}>
                     <div className={styles.heroFoto}>
-                        <img src="/doc2.jpeg" alt="Dr. Edwin García" />
+                        <img src="/doc2.jpeg" alt="Dr. Edwin García Garrido" />
                     </div>
                     <div className={styles.heroTexto}>
                         <span className={styles.eyebrow}>Cirujano General Certificado</span>
-                        <h1 className={styles.heroTitulo}>Dr. Edwin García</h1>
+                        <h1 className={styles.heroTitulo}>Dr. Edwin García Garrido</h1>
                         <p className={styles.heroFrase}>
                             Cirugía general con un trato cercano, claro y humano.
                         </p>
@@ -48,11 +48,11 @@ function About() {
                         etapa de su tratamiento.
                     </p>
                     <p className={styles.parrafo}>
-                        Detrás de cada procedimiento hay una persona que confía en mí, y
-                        trabajo con rigor para que las cosas salgan bien, Cuidando siempre su
-                        bienestar por encima de todo. Me formé como médico en la Universidad
-                        Autónoma de Baja California y concluí mi especialidad en Cirugía
-                        General en la Universidad Juárez Autónoma de Tabasco.
+                        Detrás de cada procedimiento hay una persona que confía en mí. Me formé
+                        como médico en la Universidad Autónoma de Baja California y concluí mi
+                        especialidad en Cirugía General en la Universidad Juárez Autónoma de
+                        Tabasco. Mi experiencia incluye el Hospital Regional de Alta Especialidad
+                        Dr. Gustavo A. Rovirosa Pérez.
                     </p>
                 </div>
             </section>
@@ -70,7 +70,6 @@ function About() {
                             <span className={styles.certLabel}>Certificación vigente</span>
                             <span className={styles.certOrg}>Consejo Mexicano de Cirugía General</span>
                             <span className={styles.certNum}>C25016825</span>
-                            <span className={styles.certVig}>Vigente hasta 2030</span>
                         </div>
 
                         {/* Cédulas */}
