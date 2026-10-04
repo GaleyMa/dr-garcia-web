@@ -15,10 +15,6 @@ const pages = {
     title: 'Dr. Edwin García Garrido | Cirujano General en Tijuana',
     description: 'Conoce la formación, certificación y experiencia profesional del Dr. Edwin García Garrido, Cirujano General en Tijuana.',
   },
-  '/servicios': {
-    title: 'Servicios de Cirugía General en Tijuana | Dr. Edwin García',
-    description: 'Áreas de atención del Dr. Edwin García Garrido en Tijuana: vesícula, hernias, tiroides, lipomas, trauma y urgencias quirúrgicas.',
-  },
   '/cirugia-general': {
     title: 'Cirujano General en Tijuana | Dr. Edwin García Garrido',
     description: 'Consulta de Cirugía General en Tijuana con el Dr. Edwin García Garrido. Conoce sus principales áreas de atención y solicita una valoración.',
