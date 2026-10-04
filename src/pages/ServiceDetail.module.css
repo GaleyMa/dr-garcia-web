@@ -96,3 +96,54 @@
         margin-top: 2rem;
     }
 }
+
+.contenido {
+    max-width: 780px;
+}
+
+.nota {
+    max-width: 720px;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--color-coral);
+    background: white;
+    line-height: 1.7;
+    margin: 1.5rem 0;
+}
+
+.faqs {
+    max-width: 780px;
+}
+
+.faq {
+    border-bottom: 1px solid #dde5e5;
+    padding: 1rem 0;
+}
+
+.faq summary {
+    cursor: pointer;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+.faq p {
+    padding-top: 0.8rem;
+    line-height: 1.7;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.enlace {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.revision {
+    margin-top: 2rem;
+    color: #657475;
+    font-size: 0.9rem;
+}
