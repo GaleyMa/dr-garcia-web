@@ -2,7 +2,6 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
-import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Article from './pages/Article'
 import { Analytics } from "@vercel/analytics/react"
@@ -24,7 +23,7 @@ function App() {
           <Route path="dr-edwin-garcia-garrido" element={<About />} />
           <Route path="sobre-mi" element={<Navigate to="/dr-edwin-garcia-garrido" replace />} />
 
-          <Route path="servicios" element={<Services />} />
+          <Route path="servicios" element={<Navigate to="/cirugia-general" replace />} />
           <Route path="cirugia-general" element={<GeneralSurgery />} />
           <Route path="preguntas-frecuentes" element={<FAQ />} />
           <Route path=":slug" element={<ServiceDetail />} />
