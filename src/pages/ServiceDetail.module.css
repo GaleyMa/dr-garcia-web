@@ -152,3 +152,229 @@
 .encabezadoSeparado {
     margin-top: 3.5rem;
 }
+
+
+/* Editorial service-page layout */
+.introGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.figuraMedica {
+    margin: 0;
+}
+
+.imagenPlaceholder {
+    min-height: 420px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #f6f1e9, #eef4f5);
+    border: 1px solid #e4e9e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #728081;
+}
+
+.imagenPlaceholder span {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.4rem;
+}
+
+.imagenPlaceholder strong {
+    color: var(--color-principal);
+    font-size: 1.25rem;
+}
+
+.figuraMedica figcaption {
+    margin-top: 0.65rem;
+    color: #657475;
+    font-size: 0.88rem;
+}
+
+.alerta {
+    margin-top: 1.5rem;
+    padding: 1.15rem 1.3rem;
+    border-radius: 10px;
+    background: #eef5f8;
+    color: #344b55;
+    line-height: 1.6;
+}
+
+.alerta strong {
+    display: block;
+    color: var(--color-principal);
+    margin-bottom: 0.3rem;
+}
+
+.alerta p {
+    margin: 0;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+    margin: 5rem 0;
+}
+
+.infoItem h2 {
+    color: var(--color-principal);
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.infoItem p {
+    color: #4c5657;
+    line-height: 1.75;
+}
+
+.faqSection {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: 4rem;
+    padding: 3rem;
+    border-radius: 16px;
+    background: var(--color-seccion-alt);
+}
+
+.sectionLabel {
+    display: inline-block;
+    color: var(--color-principal);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.faqIntro h2,
+.valoracion h2 {
+    color: var(--color-principal);
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.faqIntro p,
+.valoracionTexto p {
+    color: #526061;
+    line-height: 1.7;
+}
+
+.faqSection .faqs {
+    max-width: none;
+}
+
+.faqSection .faq {
+    background: white;
+    border: 1px solid #e2e8e8;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 0.65rem;
+}
+
+.faqSection .faq summary {
+    padding: 1rem 1.15rem;
+    list-style: none;
+}
+
+.faqSection .faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faqSection .faq summary::after {
+    content: '+';
+    float: right;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.faqSection .faq[open] summary::after {
+    content: '−';
+}
+
+.faqSection .faq p {
+    margin: 0;
+    padding: 0 1.15rem 1rem;
+    color: #526061;
+}
+
+.valoracion {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2.5rem;
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    background: #eef5f8;
+}
+
+.valoracionAcciones {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding-left: 2.5rem;
+    border-left: 1px solid #cbdcdf;
+    text-align: center;
+}
+
+.valoracionAcciones .boton {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .introGrid,
+    .faqSection,
+    .valoracion {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 3.5rem 0;
+    }
+
+    .figuraMedica {
+        max-width: 620px;
+        width: 100%;
+    }
+
+    .valoracionAcciones {
+        padding-left: 0;
+        padding-top: 1.5rem;
+        border-left: 0;
+        border-top: 1px solid #cbdcdf;
+    }
+}
+
+@media (max-width: 600px) {
+    .introGrid {
+        gap: 2.5rem;
+    }
+
+    .imagenPlaceholder {
+        min-height: 300px;
+    }
+
+    .faqSection,
+    .valoracion {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .faqIntro h2,
+    .valoracion h2 {
+        font-size: 1.55rem;
+    }
+}
