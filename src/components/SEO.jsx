@@ -19,6 +19,14 @@ const pages = {
     title: 'Servicios de Cirugía General en Tijuana | Dr. Edwin García',
     description: 'Áreas de atención del Dr. Edwin García Garrido en Tijuana: vesícula, hernias, tiroides, lipomas, trauma y urgencias quirúrgicas.',
   },
+  '/cirugia-general': {
+    title: 'Cirujano General en Tijuana | Dr. Edwin García Garrido',
+    description: 'Consulta de Cirugía General en Tijuana con el Dr. Edwin García Garrido. Conoce sus principales áreas de atención y solicita una valoración.',
+  },
+  '/preguntas-frecuentes': {
+    title: 'Preguntas frecuentes | Dr. Edwin García Garrido',
+    description: 'Respuestas sobre consulta, especialidad y principales áreas de atención del Dr. Edwin García Garrido, Cirujano General en Tijuana.',
+  },
   '/contacto': {
     title: 'Contacto y citas | Dr. Edwin García Garrido',
     description: 'Solicita una consulta con el Dr. Edwin García Garrido, Cirujano General. Consulta privada en Torre Médica Otay, Tijuana.',
