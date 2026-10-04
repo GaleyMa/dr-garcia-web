@@ -11,7 +11,7 @@ function NotFound() {
           <p>La dirección que intentaste abrir no existe o cambió de ubicación.</p>
           <div className={styles.links}>
             <Link to="/">Volver al inicio →</Link>
-            <Link to="/servicios">Ver servicios →</Link>
+            <Link to="/cirugia-general">Ver Cirugía General →</Link>
             <Link to="/contacto">Contacto y citas →</Link>
           </div>
         </div>
