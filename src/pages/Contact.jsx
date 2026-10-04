@@ -9,8 +9,7 @@ function Contact() {
                     <span className={styles.eyebrow}>Contacto</span>
                     <h1 className={styles.titulo}>Agenda tu consulta</h1>
                     <p className={styles.intro}>
-                        Reserva tu cita en línea o comunícate directamente. Estoy para
-                        atenderte.
+                        Consulta la disponibilidad de citas en línea o comunícate por correo electrónico.
                     </p>
 
                     <div className={styles.datos}>
@@ -22,11 +21,7 @@ function Contact() {
                         </div>
                         <div className={styles.dato}>
                             <span className={styles.datoLabel}>Ubicación</span>
-                            <span className={styles.datoValor}>Torre Médica Otay, Tijuana, B.C.</span>
-                        </div>
-                        <div className={styles.dato}>
-                            <span className={styles.datoLabel}>Horario</span>
-                            <span className={styles.datoValor}>Lun a Vie · 8:00 – 13:00</span>
+                            <span className={styles.datoValor}>Torre Médica Otay · Aeropuerto 16000, La Pechuga, 22425 Tijuana, B.C.</span>
                         </div>
                     </div>
                 </div>
@@ -39,7 +34,7 @@ function Contact() {
                         width="100%"
                         height="600"
                         frameBorder="0"
-                        title="Agenda de citas del Dr. Edwin García"
+                        title="Agenda de citas del Dr. Edwin García Garrido"
                     ></iframe>
                 </div>
             </div>
