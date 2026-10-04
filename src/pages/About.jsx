@@ -42,62 +42,58 @@ function About() {
         </div>
       </section>
 
-      <section className={`${styles.credenciales} seccion`}>
-        <div className="contenedor">
-          <div className={styles.sectionHead}>
-            <span className={styles.label}>Credenciales</span>
-            <h2>Certificación y cédulas profesionales</h2>
-          </div>
-
-          <div className={styles.certificacionPrincipal}>
-            <span className={styles.credEyebrow}>Certificación</span>
-            <div className={styles.certificacionContenido}>
-              <h3>Consejo Mexicano<br />de Cirugía General</h3>
-              <span className={styles.certificacionNumero}>C25016825</span>
-            </div>
-          </div>
-
-          <div className={styles.cedulasGrid}>
-            <div className={styles.cedulaEditorial}>
-              <span className={styles.credEyebrow}>Cédula profesional</span>
-              <strong>12992664</strong>
-              <p>Universidad Autónoma de Baja California</p>
-            </div>
-            <div className={styles.cedulaEditorial}>
-              <span className={styles.credEyebrow}>Cédula de especialista</span>
-              <strong>14920012</strong>
-              <p>Cirugía General · Universidad Juárez Autónoma de Tabasco</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className={`${styles.trayectoria} seccion`}>
         <div className={`contenedor ${styles.trayectoriaGrid}`}>
-          <div className={styles.stickyTitle}>
+          <div className={styles.trayectoriaIntro}>
             <span className={styles.label}>Formación y experiencia</span>
             <h2>Trayectoria profesional</h2>
+            <div className={styles.sello}>
+              <span className={styles.selloAnillo}>CMCG</span>
+              <div>
+                <strong>Cirujano General certificado</strong>
+                <span>Consejo Mexicano de Cirugía General</span>
+                <small>C25016825</small>
+              </div>
+            </div>
           </div>
+
           <div className={styles.timeline}>
             <article className={styles.timelineItem}>
+              <span className={styles.timelineNumero}>01</span>
               <span className={styles.dot} />
               <span className={styles.timelineTipo}>Formación médica</span>
               <h3>Universidad Autónoma de Baja California</h3>
               <p>Formación como médico.</p>
             </article>
             <article className={styles.timelineItem}>
+              <span className={styles.timelineNumero}>02</span>
               <span className={styles.dot} />
               <span className={styles.timelineTipo}>Especialidad</span>
               <h3>Universidad Juárez Autónoma de Tabasco</h3>
               <p>Especialidad en Cirugía General.</p>
             </article>
             <article className={styles.timelineItem}>
+              <span className={styles.timelineNumero}>03</span>
+              <span className={styles.dot} />
+              <span className={styles.timelineTipo}>Certificación</span>
+              <h3>Consejo Mexicano de Cirugía General</h3>
+              <p>Certificación C25016825.</p>
+            </article>
+            <article className={styles.timelineItem}>
+              <span className={styles.timelineNumero}>04</span>
               <span className={styles.dot} />
               <span className={styles.timelineTipo}>Experiencia hospitalaria</span>
               <h3>Hospital Regional de Alta Especialidad Dr. Gustavo A. Rovirosa Pérez</h3>
               <p>Experiencia profesional en el ámbito de la Cirugía General.</p>
             </article>
           </div>
+        </div>
+
+        <div className={`contenedor ${styles.cedulasBar}`}>
+          <div><span>Cédula profesional</span><strong>12992664</strong></div>
+          <span className={styles.cedulaSeparador} />
+          <div><span>Cédula de especialista</span><strong>14920012</strong></div>
+          <span className={styles.cedulaMarca}>Cirugía General</span>
         </div>
       </section>
 
