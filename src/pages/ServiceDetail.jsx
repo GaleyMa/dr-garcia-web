@@ -12,7 +12,7 @@ function ServiceDetail({ legacy = false }) {
                 <div className="contenedor">
                     <h1>Servicio no encontrado</h1>
                     <p>Consulta las áreas de atención disponibles.</p>
-                    <Link to="/servicios">Volver a servicios</Link>
+                    <Link to="/cirugia-general">Volver a Cirugía General</Link>
                 </div>
             </section>
         )
