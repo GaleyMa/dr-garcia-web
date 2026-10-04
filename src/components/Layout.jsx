@@ -8,63 +8,65 @@ function Layout() {
     const [menuAbierto, setMenuAbierto] = useState(false)
     const [menuMovil, setMenuMovil] = useState(false)
 
-    return (
+    const cerrarMenus = () => {
+        setMenuMovil(false)
+        setMenuAbierto(false)
+    }
 
+    return (
         <>
             <div className={styles.topbar}>
                 <div className={styles.topbarContenido}>
                     <a href="mailto:dr.edwin.cirugia@gmail.com" className={styles.topbarItem}>
                         dr.edwin.cirugia@gmail.com
                     </a>
-                    <span className={styles.topbarItem}>
-                        Torre Médica Otay, Tijuana
-                    </span>
+                    <span className={styles.topbarItem}>Torre Médica Otay, Tijuana</span>
                 </div>
             </div>
-            <nav className={styles.nav}>
-                <Link to="/" className={styles.logo}>
-                    <img src="/logo-barra-principal.png" alt="Dr. Edwin García" />
+
+            <nav className={styles.nav} aria-label="Navegación principal">
+                <Link to="/" className={styles.logo} onClick={cerrarMenus}>
+                    <img src="/logo-barra-principal.png" alt="Dr. Edwin García Garrido, Cirujano General" />
                 </Link>
 
                 <button
                     className={styles.hamburguesa}
                     onClick={() => setMenuMovil(!menuMovil)}
-                    aria-label="Abrir menú"
+                    aria-label={menuMovil ? 'Cerrar menú' : 'Abrir menú'}
+                    aria-expanded={menuMovil}
                 >
                     {menuMovil ? '✕' : '☰'}
                 </button>
 
-                {/* Enlaces: se muestran/ocultan en móvil según menuMovil */}
                 <div className={`${styles.enlaces} ${menuMovil ? styles.enlacesAbierto : ''}`}>
-                    <Link to="/" onClick={() => setMenuMovil(false)}>Inicio</Link>
-                    <Link to="/sobre-mi" onClick={() => setMenuMovil(false)}>Sobre mí</Link>
+                    <Link to="/" onClick={cerrarMenus}>Inicio</Link>
+                    <Link to="/dr-edwin-garcia-garrido" onClick={cerrarMenus}>Sobre mí</Link>
 
-                    {/* Dropdown de servicios (solo aplica en escritorio) */}
                     <div
                         className={styles.dropdown}
                         onMouseEnter={() => setMenuAbierto(true)}
                         onMouseLeave={() => setMenuAbierto(false)}
                     >
-                        <Link to="/servicios" onClick={() => setMenuMovil(false)}>Servicios</Link>
+                        <Link to="/servicios" onClick={cerrarMenus}>Servicios</Link>
 
-                        {menuAbierto && (
-                            <div className={styles.dropdownMenu}>
-                                {servicios.map((s) => (
-                                    <Link
-                                        key={s.slug}
-                                        to={`/servicios/${s.slug}`}
-                                        className={styles.dropdownItem}
-                                    >
-                                        {s.titulo}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
+                        <div className={`${styles.dropdownMenu} ${menuAbierto ? styles.dropdownMenuAbierto : ''}`}>
+                            {servicios.map((servicio) => (
+                                <Link
+                                    key={servicio.slug}
+                                    to={`/${servicio.slug}`}
+                                    className={styles.dropdownItem}
+                                    onClick={cerrarMenus}
+                                >
+                                    {servicio.titulo}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
-                    <Link to="/contacto" className={styles.botonCita}>
+
+                    <Link to="/contacto" onClick={cerrarMenus}>Contacto</Link>
+                    <Link to="/contacto" className={styles.botonCita} onClick={cerrarMenus}>
                         Agendar cita
                     </Link>
-
                 </div>
             </nav>
 
