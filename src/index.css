@@ -53,8 +53,18 @@ a {
 }
 
 .contenedor {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1064px;
   margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 .tituloSeccion {
