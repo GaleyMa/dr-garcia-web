@@ -19,7 +19,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(1, 15, 28, .98) 0%, rgba(1, 15, 28, .94) 30%, rgba(1, 15, 28, .67) 51%, rgba(1, 15, 28, .12) 75%, rgba(1, 15, 28, .04) 100%),
+    linear-gradient(90deg, rgba(1, 15, 28, .98) 0%, rgba(1, 15, 28, .94) 27%, rgba(1, 15, 28, .62) 43%, rgba(1, 15, 28, .10) 58%, rgba(1, 15, 28, .02) 100%),
     linear-gradient(0deg, rgba(1, 15, 28, .18), transparent 40%);
 }
 
@@ -69,7 +69,7 @@
 .heroMeta {
   max-width: 540px;
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(255,255,255,.2);
+  border-top: 1px solid #d6d2ca;
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -267,8 +267,8 @@
 
 .consulta {
   padding: 5.5rem 0;
-  background: var(--color-oscuro);
-  color: white;
+  background: #f7f3ec;
+  color: var(--color-principal);
 }
 
 .consultaGrid {
@@ -279,26 +279,26 @@
 }
 
 .consulta h2 {
-  color: white;
+  color: var(--color-principal);
   margin: 0 0 1.2rem;
 }
 
 .consulta p {
   max-width: 600px;
-  color: rgba(255,255,255,.75);
+  color: #536061;
   line-height: 1.7;
 }
 
 .idiomas {
   display: block;
   margin-top: 1rem;
-  color: rgba(255,255,255,.62);
+  color: #687676;
   font-size: .9rem;
 }
 
 .consultaAcciones {
   padding-left: 3rem;
-  border-left: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid #d6d2ca;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -307,13 +307,13 @@
 
 .consultaCta {
   padding: .95rem 1.4rem;
-  background: white;
-  color: var(--color-oscuro);
+  background: var(--color-principal);
+  color: white;
   font-weight: 700;
 }
 
 .consultaLink {
-  color: white;
+  color: var(--color-principal);
   font-weight: 600;
 }
 
