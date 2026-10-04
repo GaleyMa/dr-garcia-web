@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './About.module.css'
 import { IconShieldCheck, IconWorld, IconHeartHandshake } from '@tabler/icons-react'
 function About() {
@@ -67,7 +68,7 @@ function About() {
                         {/* Tarjeta destacada: certificación */}
                         <div className={styles.certCard}>
                             <IconShieldCheck className={styles.certIcon} stroke={1.5} />
-                            <span className={styles.certLabel}>Certificación vigente</span>
+                            <span className={styles.certLabel}>Certificación</span>
                             <span className={styles.certOrg}>Consejo Mexicano de Cirugía General</span>
                             <span className={styles.certNum}>C25016825</span>
                         </div>
@@ -85,6 +86,64 @@ function About() {
                                 <span className={styles.cedInst}>UJAT</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={`${styles.trayectoria} seccion`}>
+                <div className="contenedor">
+                    <div className={styles.trayectoriaGrid}>
+                        <div>
+                            <span className={styles.eyebrowDark}>Formación y experiencia</span>
+                            <h2 className={styles.seccionTitulo}>Trayectoria profesional</h2>
+                        </div>
+                        <div className={styles.trayectoriaContenido}>
+                            <div className={styles.trayectoriaItem}>
+                                <span>Formación médica</span>
+                                <h3>Universidad Autónoma de Baja California</h3>
+                                <p>Formación como médico.</p>
+                            </div>
+                            <div className={styles.trayectoriaItem}>
+                                <span>Especialidad</span>
+                                <h3>Universidad Juárez Autónoma de Tabasco</h3>
+                                <p>Especialidad en Cirugía General.</p>
+                            </div>
+                            <div className={styles.trayectoriaItem}>
+                                <span>Experiencia hospitalaria</span>
+                                <h3>Hospital Regional de Alta Especialidad Dr. Gustavo A. Rovirosa Pérez</h3>
+                                <p>Experiencia profesional dentro del ámbito de la Cirugía General.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={`${styles.areas} seccion`}>
+                <div className="contenedor">
+                    <span className={styles.eyebrowDark}>Áreas de práctica</span>
+                    <h2 className={styles.seccionTitulo}>Cirugía General y valoración quirúrgica</h2>
+                    <p className={styles.seccionIntro}>Conoce las principales áreas de atención en consulta privada.</p>
+                    <div className={styles.areasGrid}>
+                        <Link to="/cirugia-de-vesicula">Cirugía de vesícula <span>→</span></Link>
+                        <Link to="/cirugia-de-hernia">Cirugía de hernia <span>→</span></Link>
+                        <Link to="/cirugia-de-tiroides">Cirugía de tiroides <span>→</span></Link>
+                        <Link to="/lipomas">Lipomas <span>→</span></Link>
+                        <Link to="/trauma-y-urgencias">Trauma y urgencias quirúrgicas <span>→</span></Link>
+                    </div>
+                </div>
+            </section>
+
+            <section className={`${styles.consulta} seccion`}>
+                <div className={`contenedor ${styles.consultaGrid}`}>
+                    <div>
+                        <span className={styles.eyebrow}>Consulta privada</span>
+                        <h2>Consulta de Cirugía General en Tijuana</h2>
+                        <p>Torre Médica Otay · Aeropuerto 16000, La Pechuga, 22425 Tijuana, Baja California.</p>
+                        <p>Atención en español e inglés.</p>
+                    </div>
+                    <div className={styles.consultaAcciones}>
+                        <Link to="/contacto" className={styles.consultaBoton}>Consultar disponibilidad</Link>
+                        <Link to="/cirugia-general" className={styles.consultaEnlace}>Ver áreas de atención →</Link>
                     </div>
                 </div>
             </section>
