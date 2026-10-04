@@ -15,10 +15,10 @@ function Home() {
                             ✓ Certificado por el Consejo Mexicano de Cirugía General
                         </span>
                         <h1 className={styles.nombre}>
-                            Cirugía General y Laparoscópica de <span className={styles.acento}>Mínima Invasión</span> en Tijuana
+                            Cirugía General en <span className={styles.acento}>Tijuana</span>
                         </h1>
                         <p className={styles.especialidad}>
-                            Procedimientos seguros, menor dolor y rápida recuperación. Atención especializada y cercana.
+                            Valoración, tratamiento quirúrgico y seguimiento con información clara y atención cercana.
                         </p>
                         <Link to="/contacto" className={styles.boton}>
                             Agendar cita
@@ -27,7 +27,7 @@ function Home() {
                     </div>
 
                     <div className={styles.heroImagen}>
-                        <img src="/doc3.png" alt="Dr. Edwin García, cirujano general y laparoscópico" />
+                        <img src="/doc3.png" alt="Dr. Edwin García Garrido, Cirujano General en Tijuana" />
                     </div>
                 </div>
             </section>
@@ -43,11 +43,11 @@ function Home() {
                             consulta hasta tu recuperación.
                         </p>
                         <footer className={styles.citaAutor}>
-                            <span className={styles.citaNombre}>Dr. Edwin García</span>
+                            <span className={styles.citaNombre}>Dr. Edwin García Garrido</span>
                             <span className={styles.citaRol}>Cirujano General</span>
                         </footer>
                     </blockquote>
-                    <Link to="/sobre-mi" className={styles.enlace}>
+                    <Link to="/dr-edwin-garcia-garrido" className={styles.enlace}>
                         Conoce más sobre mí
                     </Link>
                 </div>
@@ -63,13 +63,13 @@ function Home() {
 
                     <div className={styles.serviciosGrid}>
                         {/* Columna izquierda */}
-                        <Link to={`/servicios/${servicios[0].slug}`} className={`${styles.tarjeta} ${styles.pos1}`}>
+                        <Link to={`/${servicios[0].slug}`} className={`${styles.tarjeta} ${styles.pos1}`}>
                             <div className={styles.iconoWrap}><IconVaccine stroke={1.5} /></div>
                             <h3>{servicios[0].titulo}</h3>
                             <p>{servicios[0].resumen}</p>
                         </Link>
 
-                        <Link to={`/servicios/${servicios[1].slug}`} className={`${styles.tarjeta} ${styles.pos2}`}>
+                        <Link to={`/${servicios[1].slug}`} className={`${styles.tarjeta} ${styles.pos2}`}>
                             <div className={styles.iconoWrap}><IconStethoscope stroke={1.5} /></div>
                             <h3>{servicios[1].titulo}</h3>
                             <p>{servicios[1].resumen}</p>
@@ -81,20 +81,20 @@ function Home() {
                         </div>
 
                         {/* Columna derecha */}
-                        <Link to={`/servicios/${servicios[2].slug}`} className={`${styles.tarjeta} ${styles.pos3}`}>
+                        <Link to={`/${servicios[2].slug}`} className={`${styles.tarjeta} ${styles.pos3}`}>
                             <div className={styles.iconoWrap}><IconHeartbeat stroke={1.5} /></div>
                             <h3>{servicios[2].titulo}</h3>
                             <p>{servicios[2].resumen}</p>
                         </Link>
 
-                        <Link to={`/servicios/${servicios[3].slug}`} className={`${styles.tarjeta} ${styles.pos4}`}>
+                        <Link to={`/${servicios[3].slug}`} className={`${styles.tarjeta} ${styles.pos4}`}>
                             <div className={styles.iconoWrap}><IconActivity stroke={1.5} /></div>
                             <h3>{servicios[3].titulo}</h3>
                             <p>{servicios[3].resumen}</p>
                         </Link>
 
                         {/* Quinto, ancho abajo */}
-                        <Link to={`/servicios/${servicios[4].slug}`} className={`${styles.tarjeta} ${styles.pos5}`}>
+                        <Link to={`/${servicios[4].slug}`} className={`${styles.tarjeta} ${styles.pos5}`}>
                             <div className={styles.iconoWrap}><IconAmbulance stroke={1.5} /></div>
                             <h3>{servicios[4].titulo}</h3>
                             <p>{servicios[4].resumen}</p>
@@ -117,10 +117,6 @@ function Home() {
                             <div className={styles.dato}>
                                 <span className={styles.datoLabel}>Dirección</span>
                                 <span className={styles.datoValor}>Torre Médica Otay, Tijuana, B.C.</span>
-                            </div>
-                            <div className={styles.dato}>
-                                <span className={styles.datoLabel}>Horario</span>
-                                <span className={styles.datoValor}>Lun a Vie · 8:00 – 13:00</span>
                             </div>
                             <div className={styles.dato}>
                                 <span className={styles.datoLabel}>Correo</span>
