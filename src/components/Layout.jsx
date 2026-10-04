@@ -42,14 +42,12 @@ function Layout() {
                 <div className={`${styles.enlaces} ${menuMovil ? styles.enlacesAbierto : ''}`}>
                     <Link to="/" onClick={cerrarMenus}>Inicio</Link>
                     <Link to="/dr-edwin-garcia-garrido" onClick={cerrarMenus}>Sobre mí</Link>
-                    <Link to="/cirugia-general" onClick={cerrarMenus}>Cirugía General</Link>
-
                     <div
                         className={styles.dropdown}
                         onMouseEnter={() => setMenuAbierto(true)}
                         onMouseLeave={() => setMenuAbierto(false)}
                     >
-                        <Link to="/servicios" onClick={cerrarMenus}>Servicios</Link>
+                        <Link to="/cirugia-general" onClick={cerrarMenus}>Cirugía General</Link>
 
                         <div className={`${styles.dropdownMenu} ${menuAbierto ? styles.dropdownMenuAbierto : ''}`}>
                             {servicios.map((servicio) => (
