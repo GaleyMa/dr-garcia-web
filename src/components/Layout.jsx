@@ -3,6 +3,7 @@ import Footer from './Footer'
 import styles from './Layout.module.css'
 import { useState } from 'react'
 import { servicios } from '../data/servicios'
+import Breadcrumbs from './Breadcrumbs'
 
 function Layout() {
     const [menuAbierto, setMenuAbierto] = useState(false)
@@ -73,6 +74,7 @@ function Layout() {
             </nav>
 
             <main className={styles.contenido}>
+                <Breadcrumbs />
                 <Outlet />
             </main>
 
