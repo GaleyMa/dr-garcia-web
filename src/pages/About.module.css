@@ -267,7 +267,7 @@
 
 .consulta {
   padding: 5.5rem 0;
-  background: #f7f3ec;
+  background: var(--color-seccion-alt);
   color: var(--color-principal);
 }
 
