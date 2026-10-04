@@ -11,6 +11,7 @@ import StructuredData from './components/StructuredData'
 import GeneralSurgery from './pages/GeneralSurgery'
 import FAQ from './pages/FAQ'
 import NotFound from './pages/NotFound'
+import GallbladderSurgery from './pages/GallbladderSurgery'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="servicios" element={<Navigate to="/cirugia-general" replace />} />
           <Route path="cirugia-general" element={<GeneralSurgery />} />
           <Route path="preguntas-frecuentes" element={<FAQ />} />
+          <Route path="cirugia-de-vesicula" element={<GallbladderSurgery />} />
           <Route path=":slug" element={<ServiceDetail />} />
 
           {/* Compatibilidad temporal con las URLs anteriores */}
