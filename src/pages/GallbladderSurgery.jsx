@@ -52,7 +52,7 @@ function GallbladderSurgery() {
               </details>
             </div>
 
-            <h2 className={styles.encabezado}>Valoración de vesícula en Tijuana</h2>
+            <h2 className={`${styles.encabezado} ${styles.encabezadoSeparado}`}>Valoración de vesícula en Tijuana</h2>
             <p className={styles.parrafo}>El Dr. Edwin García Garrido, especialista en Cirugía General, brinda consulta privada en Torre Médica Otay, Tijuana. Durante la consulta se revisa cada caso para explicar las alternativas de manejo de acuerdo con el diagnóstico.</p>
             <div className={styles.acciones}>
               <Link to="/contacto" className={styles.boton}>Agendar valoración</Link>
