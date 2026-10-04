@@ -41,6 +41,7 @@ function Layout() {
                 <div className={`${styles.enlaces} ${menuMovil ? styles.enlacesAbierto : ''}`}>
                     <Link to="/" onClick={cerrarMenus}>Inicio</Link>
                     <Link to="/dr-edwin-garcia-garrido" onClick={cerrarMenus}>Sobre mí</Link>
+                    <Link to="/cirugia-general" onClick={cerrarMenus}>Cirugía General</Link>
 
                     <div
                         className={styles.dropdown}
@@ -63,6 +64,7 @@ function Layout() {
                         </div>
                     </div>
 
+                    <Link to="/preguntas-frecuentes" onClick={cerrarMenus}>Preguntas frecuentes</Link>
                     <Link to="/contacto" onClick={cerrarMenus}>Contacto</Link>
                     <Link to="/contacto" className={styles.botonCita} onClick={cerrarMenus}>
                         Agendar cita
