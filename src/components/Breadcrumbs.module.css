@@ -1,0 +1,28 @@
+.wrap {
+  background: #fff;
+  border-bottom: 1px solid #e6ecec;
+}
+
+.inner {
+  padding: 0.7rem 2rem;
+  font-size: 0.86rem;
+  color: #657475;
+}
+
+.inner a {
+  color: var(--color-principal);
+}
+
+.separator {
+  display: inline-block;
+  margin: 0 0.55rem;
+  color: #9aa7a8;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0.65rem 1.25rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
