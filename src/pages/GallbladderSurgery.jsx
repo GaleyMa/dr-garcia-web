@@ -32,9 +32,33 @@ function GallbladderSurgery() {
             <h2 className={styles.encabezado}>¿Cuándo acudir a urgencias?</h2>
             <p className={styles.parrafo}>Un dolor abdominal intenso o persistente, especialmente acompañado de fiebre, escalofríos, vómitos importantes o coloración amarilla de la piel o los ojos, requiere atención médica oportuna. La consulta programada de este sitio no sustituye un servicio de urgencias.</p>
 
-            <h2 className={styles.encabezado}>Consulta en Tijuana</h2>
-            <p className={styles.parrafo}>El Dr. Edwin García Garrido brinda consulta privada en Torre Médica Otay, Tijuana.</p>
-            <Link to="/contacto" className={styles.boton}>Agendar valoración</Link>
+            <h2 className={styles.encabezado}>Preguntas frecuentes</h2>
+            <div className={styles.faqs}>
+              <details className={styles.faq}>
+                <summary>¿Todos los cálculos en la vesícula necesitan cirugía?</summary>
+                <p>No. La necesidad de tratamiento depende de los síntomas, los estudios, las complicaciones y la valoración individual.</p>
+              </details>
+              <details className={styles.faq}>
+                <summary>¿Qué es una colecistectomía?</summary>
+                <p>Es la operación mediante la cual se retira la vesícula biliar.</p>
+              </details>
+              <details className={styles.faq}>
+                <summary>¿Se puede vivir sin vesícula?</summary>
+                <p>Sí. La vesícula almacena bilis, pero no es indispensable para que el hígado continúe produciéndola y esta llegue al intestino.</p>
+              </details>
+              <details className={styles.faq}>
+                <summary>¿Debo llevar mis estudios a la consulta?</summary>
+                <p>Si ya cuentas con ultrasonidos, análisis u otros estudios relacionados con tus síntomas, pueden ser útiles durante la valoración.</p>
+              </details>
+            </div>
+
+            <h2 className={styles.encabezado}>Valoración de vesícula en Tijuana</h2>
+            <p className={styles.parrafo}>El Dr. Edwin García Garrido, especialista en Cirugía General, brinda consulta privada en Torre Médica Otay, Tijuana. Durante la consulta se revisa cada caso para explicar las alternativas de manejo de acuerdo con el diagnóstico.</p>
+            <div className={styles.acciones}>
+              <Link to="/contacto" className={styles.boton}>Agendar valoración</Link>
+              <Link to="/dr-edwin-garcia-garrido" className={styles.enlace}>Conocer al Dr. Edwin García Garrido →</Link>
+            </div>
+            <p className={styles.revision}>Información general para pacientes. Este contenido no sustituye una valoración médica individual.</p>
           </div>
         </div>
       </section>
