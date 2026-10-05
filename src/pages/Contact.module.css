@@ -305,3 +305,17 @@
 
   .noticeInner { grid-template-columns: 38px 1fr; }
 }
+
+
+.phonePlaceholder {
+  color: var(--color-principal);
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.phonePlaceholder small {
+  color: #8a9695;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
