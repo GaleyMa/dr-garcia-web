@@ -36,8 +36,7 @@ function Footer() {
       </div>
 
       <div className={`contenedor ${styles.contactBar}`}>
-        <span className={styles.heading}>Consulta privada</span>
-        <strong>Torre Médica Otay</strong>
+        <span className={styles.consultLabel}>Consulta privada · <strong>Torre Médica Otay</strong></span>
         <address>Aeropuerto 16000, La Pechuga, 22425 Tijuana, B.C.</address>
         <a href="mailto:dr.edwin.cirugia@gmail.com">dr.edwin.cirugia@gmail.com</a>
         <span className={styles.phone}>+52 664 000 0000 <small>· provisional</small></span>
