@@ -156,11 +156,12 @@
         left: 0;
         right: 0;
         flex-direction: column;
-        background: var(--color-crema);
+        background: var(--color-claro);
         padding: 1rem 2rem;
         gap: 1rem;
         box-shadow: 0 8px 20px rgba(1, 15, 28, 0.1);
-        border-top: 1px solid #e3dccb;
+        border-top: 1px solid #dde5e5;
+        z-index: 100;
     }
 
     .enlacesAbierto {
