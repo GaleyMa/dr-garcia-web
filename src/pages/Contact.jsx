@@ -47,6 +47,12 @@ function Contact() {
               <a href="mailto:dr.edwin.cirugia@gmail.com">dr.edwin.cirugia@gmail.com</a>
             </div>
 
+            <div className={styles.detail}>
+              <span>Teléfono</span>
+              {/* TODO: reemplazar por el número real antes de producción */}
+              <span className={styles.phonePlaceholder}>+52 664 000 0000 <small>· provisional</small></span>
+            </div>
+
             <div className={styles.locationGraphic} aria-hidden="true">
               <i />
               <span>TIJ</span>
