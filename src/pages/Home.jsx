@@ -26,7 +26,7 @@ function Home() {
             <span className={styles.anillo} aria-hidden="true" />
             <span className={styles.numeroDecorativo} aria-hidden="true">01</span>
             <div className={styles.heroImagen}>
-              <img src="/doc3.png" alt="Dr. Edwin García Garrido, Cirujano General en Tijuana" />
+              <img src="/doc3.webp" alt="Dr. Edwin García Garrido, Cirujano General en Tijuana" />
             </div>
             <div className={styles.heroFicha}>
               <strong>Dr. Edwin García Garrido</strong>
