@@ -9,11 +9,7 @@ function Footer() {
         <div className={styles.identity}>
           <img src="/logo-footer.png" alt="Dr. Edwin García Garrido" className={styles.logo} />
           <p>Cirugía General · Tijuana, Baja California</p>
-          <div className={styles.socials} aria-label="Perfiles profesionales">
-            <a href="https://www.instagram.com/dr.edwingarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram del Dr. Edwin García Garrido"><IconBrandInstagram size={21} stroke={1.6} /></a>
-            <a href="https://www.facebook.com/people/Dr-Edwin-Garcia/61581486067814/" target="_blank" rel="noopener noreferrer" aria-label="Facebook del Dr. Edwin García Garrido"><IconBrandFacebook size={21} stroke={1.6} /></a>
-            <a className={styles.doctoralia} href="https://www.doctoralia.com.mx/edwin-garcia-garrido/cirujano-general/tijuana" target="_blank" rel="noopener noreferrer" aria-label="Perfil del Dr. Edwin García Garrido en Doctoralia">D</a>
-          </div>
+
         </div>
 
         <div className={styles.column}>
@@ -40,6 +36,11 @@ function Footer() {
         <address>Aeropuerto 16000, La Pechuga, 22425 Tijuana, B.C.</address>
         <a href="mailto:dr.edwin.cirugia@gmail.com">dr.edwin.cirugia@gmail.com</a>
         <span className={styles.phone}>+52 664 000 0000 <small>· provisional</small></span>
+        <div className={styles.socials} aria-label="Perfiles profesionales">
+            <a href="https://www.instagram.com/dr.edwingarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram del Dr. Edwin García Garrido"><IconBrandInstagram size={21} stroke={1.6} /></a>
+            <a href="https://www.facebook.com/people/Dr-Edwin-Garcia/61581486067814/" target="_blank" rel="noopener noreferrer" aria-label="Facebook del Dr. Edwin García Garrido"><IconBrandFacebook size={21} stroke={1.6} /></a>
+            <a className={styles.doctoralia} href="https://www.doctoralia.com.mx/edwin-garcia-garrido/cirujano-general/tijuana" target="_blank" rel="noopener noreferrer" aria-label="Perfil del Dr. Edwin García Garrido en Doctoralia">D</a>
+          </div>
       </div>
 
       <div className={styles.medicalNotice}>
