@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
+import NotFound from './NotFound'
 import { articulos } from '../data/articulos'
 import styles from './Article.module.css'
 
@@ -6,16 +7,7 @@ function Article() {
     const { slug } = useParams()
     const articulo = articulos.find((art) => art.slug === slug)
 
-    if (!articulo) {
-        return (
-            <section className="seccion">
-                <div className="contenedor">
-                    <h1>Artículo no encontrado</h1>
-                    <Link to="/">Volver al inicio</Link>
-                </div>
-            </section>
-        )
-    }
+    if (!articulo) return <NotFound />
 
     return (
         <section className="seccion">
