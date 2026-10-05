@@ -30,7 +30,7 @@
   margin: 0;
   font-size: clamp(4rem,8vw,7.5rem);
   line-height: .84;
-  letter-spacing: -5px;
+  letter-spacing: -1.5px;
 }
 
 .heroIntro {
@@ -49,17 +49,6 @@
 }
 
 .heroCta { color: white; font-weight: 700; }
-
-.heroNumero {
-  position: absolute;
-  right: 0;
-  top: -2.5rem;
-  color: rgba(255,255,255,.055);
-  font-family: var(--font-titulos);
-  font-size: 8rem;
-  font-weight: 800;
-  line-height: 1;
-}
 
 .heroAnillo {
   position: absolute;
@@ -353,8 +342,7 @@
 }
 
 @media (max-width: 560px) {
-  .hero h1 { letter-spacing: -3px; }
-  .heroNumero { font-size: 6rem; }
+  .hero h1 { letter-spacing: -.8px; }
 
   .introVisual { min-height: 290px; }
   .orbita { width: 210px; height: 210px; }
