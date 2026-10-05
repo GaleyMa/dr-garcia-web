@@ -973,3 +973,143 @@
         background: var(--color-seccion-alt);
     }
 }
+
+
+/* Shared variants for the remaining service landings */
+.stepLabel {
+    display: inline-block;
+    margin-bottom: .75rem;
+    color: #82908f;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.emergencyBand {
+    background: var(--color-coral);
+    color: white;
+}
+
+.emergencyBandInner {
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: 52px minmax(0,1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.emergencySymbol {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.emergencyBand strong {
+    display: block;
+    margin-bottom: .25rem;
+    font-size: 1.05rem;
+}
+
+.emergencyBand p {
+    max-width: 850px;
+    margin: 0;
+    color: rgba(255,255,255,.88);
+    line-height: 1.55;
+}
+
+.traumaInfo {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr .85fr;
+    gap: 0;
+    border-top: 1px solid #c8d2d1;
+    border-bottom: 1px solid #c8d2d1;
+}
+
+.traumaInfo article {
+    padding: 2.2rem;
+}
+
+.traumaInfo article:first-child { padding-left: 0; }
+
+.traumaInfo article:nth-child(2) {
+    background: white;
+    border-top: 2px solid var(--color-coral);
+    transform: translateY(1.4rem);
+}
+
+.traumaInfo article:last-child { padding-right: 0; }
+
+.traumaInfo span {
+    color: var(--color-coral);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.traumaInfo h3 {
+    margin: .9rem 0 .7rem;
+    color: var(--color-principal);
+    font-size: 1.25rem;
+}
+
+.traumaInfo p {
+    margin: 0;
+    color: #5d6969;
+    line-height: 1.7;
+}
+
+.nonEmergencyConsult {
+    padding: 5rem 0;
+    background: var(--color-seccion-alt);
+}
+
+.nonEmergencyConsult h2 {
+    margin: 0;
+    color: var(--color-principal);
+    font-size: clamp(2.3rem,4vw,3.8rem);
+    line-height: 1.05;
+}
+
+.nonEmergencyCopy {
+    padding-left: 2.5rem;
+    border-left: 1px solid #c8d2d1;
+}
+
+.nonEmergencyCopy p {
+    margin: 0 0 1.6rem;
+    color: #5d6969;
+    line-height: 1.7;
+}
+
+.nonEmergencyCopy .consultActions a:not(.consultButton) {
+    color: var(--color-principal);
+}
+
+@media (max-width: 850px) {
+    .traumaInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .traumaInfo article,
+    .traumaInfo article:first-child,
+    .traumaInfo article:last-child {
+        padding: 1.7rem 0;
+        border-bottom: 1px solid #c8d2d1;
+    }
+
+    .traumaInfo article:nth-child(2) {
+        padding: 1.7rem;
+        transform: none;
+    }
+
+    .nonEmergencyCopy {
+        padding: 2rem 0 0;
+        border-left: 0;
+        border-top: 1px solid #c8d2d1;
+    }
+}
