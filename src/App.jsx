@@ -46,6 +46,11 @@ function App() {
           <Route path="servicios/:slug" element={<Navigate to="/cirugia-general" replace />} />
 
           <Route path="contacto" element={<Contact />} />
+
+          <Route path="aviso-de-privacidad" element={<Legal type="privacy" />} />
+          <Route path="terminos-de-uso" element={<Legal type="terms" />} />
+          <Route path="aviso-medico" element={<Legal type="medical" />} />
+
           <Route path="blog/:slug" element={<Article />} />
           <Route path="*" element={<NotFound />} />
         </Route>
