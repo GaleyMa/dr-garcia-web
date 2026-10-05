@@ -1,82 +1,75 @@
-import { useParams, Link } from 'react-router-dom'
-import { servicios } from '../data/servicios'
+import { useParams, Link, Navigate } from 'react-router-dom'
+import { buscarServicio } from '../data/servicios'
 import styles from './ServiceDetail.module.css'
 
-function ServiceDetail() {
+function ServiceDetail({ legacy = false }) {
     const { slug } = useParams()
-    const servicio = servicios.find((s) => s.slug === slug)
+    const servicio = buscarServicio(slug)
 
     if (!servicio) {
         return (
             <section className="seccion">
                 <div className="contenedor">
                     <h1>Servicio no encontrado</h1>
-                    <Link to="/servicios">Volver a servicios</Link>
+                    <p>Consulta las áreas de atención disponibles.</p>
+                    <Link to="/cirugia-general">Volver a Cirugía General</Link>
                 </div>
             </section>
         )
+    }
+
+    if (legacy || slug !== servicio.slug) {
+        return <Navigate to={`/${servicio.slug}`} replace />
     }
 
     return (
         <>
             <section className={styles.hero}>
                 <div className="contenedor">
-                    <section className={styles.hero}>
-                        <div className="contenedor">
-                            <span className={styles.eyebrow}>Servicio</span>
-                            <h1 className={styles.titulo}>{servicio.titulo}</h1>
-                            <p className={styles.resumen}>{servicio.resumen}</p>
-                        </div>
-                    </section>
-
-                    {servicio.imagen && (<img src={servicio.imagen} alt={servicio.titulo} className={styles.detalleImg} />)}
-
+                    <span className={styles.eyebrow}>Cirugía General en Tijuana</span>
+                    <h1 className={styles.titulo}>{servicio.titulo}</h1>
+                    {servicio.nombreMedico && <p>{servicio.nombreMedico}</p>}
+                    <p className={styles.resumen}>{servicio.resumen}</p>
+                    {servicio.imagen && (
+                        <img src={servicio.imagen} alt={servicio.titulo} className={styles.detalleImg} />
+                    )}
                 </div>
             </section>
 
             <section className={`${styles.bloque} seccion`}>
                 <div className="contenedor">
-                    <h2 className={styles.encabezado}>¿Qué es?</h2>
-                    <p className={styles.parrafo}>{servicio.queEs}</p>
+                    <h2 className={styles.encabezado}>Padecimientos y motivos de valoración</h2>
+                    <ul>
+                        {servicio.temas.map((tema) => <li key={tema}>{tema}</li>)}
+                    </ul>
+                    <p className={styles.parrafo}>
+                        La indicación de un procedimiento depende de la valoración médica individual,
+                        los síntomas, estudios y antecedentes de cada paciente.
+                    </p>
                 </div>
             </section>
+
+            {servicio.avisoUrgencia && (
+                <section className={`${styles.bloqueAlt} seccion`}>
+                    <div className="contenedor">
+                        <h2 className={styles.encabezado}>Si se trata de una emergencia</h2>
+                        <p className={styles.parrafo}>
+                            Este sitio no sustituye un servicio de urgencias. Ante síntomas graves o una
+                            emergencia médica, acude al servicio de urgencias más cercano.
+                        </p>
+                    </div>
+                </section>
+            )}
 
             <section className={`${styles.bloqueAlt} seccion`}>
                 <div className="contenedor">
-                    <h2 className={styles.encabezado}>¿Cuándo se necesita?</h2>
-                    <p className={styles.parrafo}>{servicio.cuando}</p>
-                </div>
-            </section>
-
-            <section className={`${styles.bloque} seccion`}>
-                <div className="contenedor">
-                    <h2 className={styles.encabezado}>El procedimiento</h2>
-                    <p className={styles.parrafo}>{servicio.procedimiento}</p>
-                </div>
-            </section>
-            <section className={`${styles.bloqueAlt} seccion`}>
-                <div className="contenedor">
-                    <h2 className={styles.encabezado}>Riesgos</h2>
-                    <p className={styles.parrafo}>{servicio.riesgo}</p>
-                </div>
-            </section>
-            <section className={`${styles.bloque} seccion`}>
-                <div className="contenedor">
-                    <h2 className={styles.encabezado}>Preparación</h2>
-                    <p className={styles.parrafo}>{servicio.preparacion}</p>
-                </div>
-            </section>
-            <section className={`${styles.bloqueAlt} seccion`}>
-                <div className="contenedor">
-                    <h2 className={styles.encabezado}>Recuperación</h2>
-                    <p className={styles.parrafo}>{servicio.recuperacion}</p>
-                </div>
-            </section>
-            <section className={`${styles.bloque} seccion`}>
-                <div className="contenedor">
-                    <h2 className={styles.encabezado}>Resultados</h2>
-                    <p className={styles.parrafo}>{servicio.resultados}</p>
-                    <Link to="/contacto" className={styles.boton}>Agendar consulta</Link>
+                    <h2 className={styles.encabezado}>Valoración por Cirugía General</h2>
+                    <p className={styles.parrafo}>
+                        El Dr. Edwin García Garrido brinda consulta privada en Torre Médica Otay, Tijuana.
+                        Durante la valoración se revisa el caso y se explican las alternativas de manejo
+                        de acuerdo con el diagnóstico.
+                    </p>
+                    <Link to="/contacto" className={styles.boton}>Agendar valoración</Link>
                 </div>
             </section>
         </>

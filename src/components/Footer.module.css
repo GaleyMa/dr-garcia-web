@@ -1,56 +1,260 @@
 .footer {
-    background-color: var(--color-oscuro);
-    color: white;
-    padding: 1rem 1rem 1rem;
+  background: var(--color-oscuro);
+  color: white;
 }
 
-.contenido {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+.main {
+  display: grid;
+  grid-template-columns: 1.35fr .8fr .9fr;
+  gap: 2rem;
+  padding-top: 2.2rem;
+  padding-bottom: 1.5rem;
 }
 
-.info h3 {
-    margin-bottom: 0.5rem;
-}
-
-.info p {
-    opacity: 0.8;
-    font-size: 0.95rem;
-}
-
-.redes {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.redes a {
-    color: white;
-    opacity: 0.85;
-    transition: opacity 0.2s;
-}
-
-.redes a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-.copy {
-    max-width: 800px;
-    margin: 2rem auto 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: center;
-    font-size: 0.85rem;
-    opacity: 0.7;
+.identity {
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .logo {
-    height: 200px;
-    display: block;
+  width: min(175px,100%);
+  height: auto;
+  display: block;
+  margin-bottom: .45rem;
+}
+
+.identity > p {
+  max-width: 240px;
+  margin: 0;
+  color: rgba(255,255,255,.62);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.socials {
+  display: flex;
+  gap: .65rem;
+  margin-top: 0;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  color: white;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.socials a:hover {
+  border-color: var(--color-coral);
+  color: var(--color-coral);
+  transform: translateY(-2px);
+}
+
+.socials .doctoralia {
+  position: relative;
+  display: flex;
+  gap: 1px;
+  font-family: var(--font-titulos);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.heading {
+  display: block;
+  margin-bottom: .75rem;
+  color: var(--color-coral);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.column a {
+  margin-bottom: .42rem;
+  color: rgba(255,255,255,.72);
+  font-size: .91rem;
+  line-height: 1.4;
+  transition: color .2s ease;
+}
+
+.column a:hover,
+.contact a:hover { color: white; }
+
+.contactBar {
+  display: grid;
+  grid-template-columns: auto minmax(260px,1fr) auto auto auto;
+  gap: .75rem 1.5rem;
+  align-items: center;
+  padding-top: .85rem;
+  padding-bottom: .85rem;
+  border-top: 1px solid rgba(255,255,255,.13);
+}
+
+.consultLabel {
+  color: var(--color-coral);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.consultLabel strong {
+  color: white;
+  font-size: .78rem;
+  letter-spacing: .03em;
+}
+
+.contactBar address,
+.contactBar a,
+.phone {
+  margin: 0;
+  color: rgba(255,255,255,.65);
+  font-size: .82rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.contactBar a,
+.phone { color: rgba(255,255,255,.78); }
+
+.contactBar > a { overflow-wrap: anywhere; }
+
+.contactBar .socials {
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.phone { white-space: nowrap; }
+
+.phone small {
+  color: rgba(255,255,255,.42);
+  font-size: .65rem;
+}
+
+.medicalNotice {
+  border-top: 1px solid rgba(255,255,255,.13);
+  border-bottom: 1px solid rgba(255,255,255,.13);
+  background: rgba(0,0,0,.08);
+}
+
+.medicalNotice > div {
+  display: grid;
+  grid-template-columns: 135px minmax(0,1fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding-top: .85rem;
+  padding-bottom: .85rem;
+}
+
+.medicalNotice span {
+  color: var(--color-coral);
+  font-size: .67rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.medicalNotice p {
+  max-width: 880px;
+  margin: 0;
+  color: rgba(255,255,255,.56);
+  font-size: .8rem;
+  line-height: 1.65;
+}
+
+.legal {
+  min-height: 52px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.legal p {
+  margin: 0;
+  color: rgba(255,255,255,.42);
+  font-size: .75rem;
+}
+
+.legal nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legal a {
+  color: rgba(255,255,255,.5);
+  font-size: .75rem;
+}
+
+.legal a:hover { color: white; }
+
+@media (max-width: 980px) {
+  .main {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .contactBar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contactBar .socials {
+    justify-content: flex-start;
+  }
+
+  .consultLabel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+    padding-top: 2.2rem;
+  }
+
+  .identity { grid-column: 1 / -1; }
+
+  .contactBar {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+
+  .consultLabel { grid-column: auto; margin-bottom: .35rem; }
+  .phone { white-space: normal; }
+
+  .medicalNotice > div {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+  }
+
+  .legal {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1.1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .main { grid-template-columns: 1fr; }
+  .identity { grid-column: auto; }
 }
