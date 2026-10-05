@@ -73,6 +73,8 @@ function Contact() {
                 width="100%"
                 height="650"
                 frameBorder="0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 title="Agenda de citas del Dr. Edwin García Garrido"
               />
             </div>
