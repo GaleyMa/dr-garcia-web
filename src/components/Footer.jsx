@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { IconBrandFacebook, IconBrandInstagram, IconExternalLink } from '@tabler/icons-react'
+import { IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react'
 import styles from './Footer.module.css'
 
 function Footer() {
@@ -12,7 +12,7 @@ function Footer() {
           <div className={styles.socials} aria-label="Perfiles profesionales">
             <a href="https://www.instagram.com/dr.edwingarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram del Dr. Edwin García Garrido"><IconBrandInstagram size={21} stroke={1.6} /></a>
             <a href="https://www.facebook.com/people/Dr-Edwin-Garcia/61581486067814/" target="_blank" rel="noopener noreferrer" aria-label="Facebook del Dr. Edwin García Garrido"><IconBrandFacebook size={21} stroke={1.6} /></a>
-            <a className={styles.doctoralia} href="https://www.doctoralia.com.mx/edwin-garcia-garrido/cirujano-general/tijuana" target="_blank" rel="noopener noreferrer" aria-label="Perfil del Dr. Edwin García Garrido en Doctoralia"><span>D</span><IconExternalLink size={12} stroke={1.7} /></a>
+            <a className={styles.doctoralia} href="https://www.doctoralia.com.mx/edwin-garcia-garrido/cirujano-general/tijuana" target="_blank" rel="noopener noreferrer" aria-label="Perfil del Dr. Edwin García Garrido en Doctoralia">D</a>
           </div>
         </div>
 
@@ -33,13 +33,14 @@ function Footer() {
           <Link to="/trauma-y-urgencias">Trauma y urgencias</Link>
         </div>
 
-        <div className={styles.contact}>
-          <span className={styles.heading}>Consulta privada</span>
-          <strong>Torre Médica Otay</strong>
-          <address>Aeropuerto 16000<br />La Pechuga, 22425<br />Tijuana, B.C.</address>
-          <a href="mailto:dr.edwin.cirugia@gmail.com">dr.edwin.cirugia@gmail.com</a>
-          <span className={styles.phone}>+52 664 000 0000 <small>· provisional</small></span>
-        </div>
+      </div>
+
+      <div className={`contenedor ${styles.contactBar}`}>
+        <span className={styles.heading}>Consulta privada</span>
+        <strong>Torre Médica Otay</strong>
+        <address>Aeropuerto 16000, La Pechuga, 22425 Tijuana, B.C.</address>
+        <a href="mailto:dr.edwin.cirugia@gmail.com">dr.edwin.cirugia@gmail.com</a>
+        <span className={styles.phone}>+52 664 000 0000 <small>· provisional</small></span>
       </div>
 
       <div className={styles.medicalNotice}>
