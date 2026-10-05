@@ -1,8 +1,13 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "redirects": [
+    { "source": "/sobre-mi", "destination": "/dr-edwin-garcia-garrido", "permanent": true },
+    { "source": "/servicios", "destination": "/cirugia-general", "permanent": true },
+    { "source": "/servicios/vesicula", "destination": "/cirugia-de-vesicula", "permanent": true },
+    { "source": "/servicios/hernias", "destination": "/cirugia-de-hernia", "permanent": true },
+    { "source": "/servicios/tiroides", "destination": "/cirugia-de-tiroides", "permanent": true },
+    { "source": "/servicios/lipomas", "destination": "/lipomas", "permanent": true },
+    { "source": "/servicios/trauma-urgencias", "destination": "/trauma-y-urgencias", "permanent": true }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
