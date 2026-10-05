@@ -12,7 +12,6 @@ function GeneralSurgery() {
             <h1>Cirugía<br />General</h1>
           </div>
           <div className={styles.heroIntro}>
-            <span className={styles.heroNumero} aria-hidden="true">05</span>
             <p>Valoración, tratamiento quirúrgico y seguimiento para distintos padecimientos dentro de la práctica de Cirugía General.</p>
             <Link to="/contacto" className={styles.heroCta}>Consultar disponibilidad →</Link>
           </div>
