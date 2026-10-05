@@ -17,7 +17,7 @@
   width: min(175px,100%);
   height: auto;
   display: block;
-  margin-bottom: .75rem;
+  margin-bottom: .45rem;
 }
 
 .identity > p {
@@ -31,7 +31,7 @@
 .socials {
   display: flex;
   gap: .65rem;
-  margin-top: 1rem;
+  margin-top: .7rem;
 }
 
 .socials a {
@@ -89,7 +89,7 @@
 
 .contactBar {
   display: grid;
-  grid-template-columns: auto auto minmax(280px,1fr) auto auto;
+  grid-template-columns: auto minmax(300px,1fr) auto auto;
   gap: .75rem 1.5rem;
   align-items: center;
   padding-top: .85rem;
@@ -97,11 +97,19 @@
   border-top: 1px solid rgba(255,255,255,.13);
 }
 
-.contactBar .heading { margin: 0; }
-
-.contactBar strong {
-  font-size: .92rem;
+.consultLabel {
+  color: var(--color-coral);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   white-space: nowrap;
+}
+
+.consultLabel strong {
+  color: white;
+  font-size: .78rem;
+  letter-spacing: .03em;
 }
 
 .contactBar address,
@@ -191,10 +199,12 @@
   }
 
   .contactBar {
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .contactBar .heading { grid-column: 1 / -1; }
+  .consultLabel {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 700px) {
@@ -211,7 +221,7 @@
     gap: .5rem;
   }
 
-  .contactBar .heading { grid-column: auto; margin-bottom: .35rem; }
+  .consultLabel { grid-column: auto; margin-bottom: .35rem; }
   .phone { white-space: normal; }
 
   .medicalNotice > div {
