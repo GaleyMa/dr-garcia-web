@@ -1,4 +1,6 @@
 :root {
+  --color-marca-profundo: #0a3d4a;
+  /* azul petróleo de marca — topbar y fondos protagonistas */
   --color-principal: #1D625F;
   /* teal medio — color de marca */
   --color-profundo: #093A3F;
