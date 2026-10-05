@@ -5,10 +5,10 @@
 
 .main {
   display: grid;
-  grid-template-columns: 1.35fr .8fr .9fr 1.1fr;
-  gap: 4rem;
-  padding-top: 5rem;
-  padding-bottom: 4.5rem;
+  grid-template-columns: 1.35fr .8fr .9fr;
+  gap: 3rem;
+  padding-top: 3.2rem;
+  padding-bottom: 2.4rem;
 }
 
 .identity { padding-right: 1rem; }
@@ -60,12 +60,6 @@
   font-weight: 800;
 }
 
-.doctoralia svg {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-}
-
 .heading {
   display: block;
   margin-bottom: 1.25rem;
@@ -93,32 +87,43 @@
 .column a:hover,
 .contact a:hover { color: white; }
 
-.contact strong {
-  display: block;
-  margin-bottom: .75rem;
-  font-size: 1.02rem;
+.contactBar {
+  display: grid;
+  grid-template-columns: auto auto minmax(280px,1fr) auto auto;
+  gap: 1.5rem 2rem;
+  align-items: center;
+  padding-top: 1.35rem;
+  padding-bottom: 1.35rem;
+  border-top: 1px solid rgba(255,255,255,.13);
 }
 
-.contact address {
-  margin-bottom: 1rem;
-  color: rgba(255,255,255,.65);
-  font-size: .9rem;
-  font-style: normal;
-  line-height: 1.65;
+.contactBar .heading { margin: 0; }
+
+.contactBar strong {
+  font-size: .92rem;
+  white-space: nowrap;
 }
 
-.contact a,
+.contactBar address,
+.contactBar a,
 .phone {
-  display: block;
-  margin-top: .55rem;
-  color: rgba(255,255,255,.78);
-  font-size: .88rem;
-  overflow-wrap: anywhere;
+  margin: 0;
+  color: rgba(255,255,255,.65);
+  font-size: .82rem;
+  font-style: normal;
+  line-height: 1.5;
 }
+
+.contactBar a,
+.phone { color: rgba(255,255,255,.78); }
+
+.contactBar a { overflow-wrap: anywhere; }
+
+.phone { white-space: nowrap; }
 
 .phone small {
   color: rgba(255,255,255,.42);
-  font-size: .68rem;
+  font-size: .65rem;
 }
 
 .medicalNotice {
@@ -182,25 +187,32 @@
 @media (max-width: 980px) {
   .main {
     grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
-  .contact {
-    grid-column: 1 / -1;
-    padding-top: 2.5rem;
-    border-top: 1px solid rgba(255,255,255,.13);
+  .contactBar {
+    grid-template-columns: auto 1fr 1fr;
   }
+
+  .contactBar .heading { grid-column: 1 / -1; }
 }
 
 @media (max-width: 700px) {
   .main {
     grid-template-columns: 1fr 1fr;
-    gap: 3rem 2rem;
-    padding-top: 4rem;
+    gap: 2.5rem 2rem;
+    padding-top: 3rem;
   }
 
-  .identity,
-  .contact { grid-column: 1 / -1; }
+  .identity { grid-column: 1 / -1; }
+
+  .contactBar {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+
+  .contactBar .heading { grid-column: auto; margin-bottom: .35rem; }
+  .phone { white-space: normal; }
 
   .medicalNotice > div {
     grid-template-columns: 1fr;
@@ -218,6 +230,5 @@
 
 @media (max-width: 430px) {
   .main { grid-template-columns: 1fr; }
-  .identity,
-  .contact { grid-column: auto; }
+  .identity { grid-column: auto; }
 }
