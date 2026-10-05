@@ -15,6 +15,7 @@ import HerniaSurgery from './pages/HerniaSurgery'
 import ThyroidSurgery from './pages/ThyroidSurgery'
 import LipomaSurgery from './pages/LipomaSurgery'
 import TraumaEmergencySurgery from './pages/TraumaEmergencySurgery'
+import Legal from './pages/Legal'
 
 function App() {
   return (
