@@ -27,6 +27,18 @@ const pages = {
     title: 'Contacto y citas | Dr. Edwin García Garrido',
     description: 'Solicita una consulta con el Dr. Edwin García Garrido, Cirujano General. Consulta privada en Torre Médica Otay, Tijuana.',
   },
+  '/aviso-de-privacidad': {
+    title: 'Aviso de privacidad | Dr. Edwin García Garrido',
+    description: 'Aviso de privacidad del sitio profesional del Dr. Edwin García Garrido.',
+  },
+  '/terminos-de-uso': {
+    title: 'Términos de uso | Dr. Edwin García Garrido',
+    description: 'Términos de uso e información general del sitio profesional del Dr. Edwin García Garrido.',
+  },
+  '/aviso-medico': {
+    title: 'Aviso médico | Dr. Edwin García Garrido',
+    description: 'Alcance de la información médica publicada en el sitio del Dr. Edwin García Garrido.',
+  },
 }
 
 function setMeta(name, content, property = false) {
@@ -69,11 +81,17 @@ function SEO() {
       }
     }
 
-    const title = metadata?.title || DEFAULT_TITLE
-    const description = metadata?.description || DEFAULT_DESCRIPTION
+    const isKnownArticle = pathname.startsWith('/blog/') && articulos.some((item) => pathname === `/blog/${item.slug}`)
+    const isKnownPage = Boolean(metadata) || Boolean(service && pathname === `/${service.slug}`) || isKnownArticle
+    const isLegacyRoute = pathname === '/sobre-mi' || pathname === '/servicios' || pathname.startsWith('/servicios/')
+    const isNotFound = !isKnownPage && !isLegacyRoute
+
+    const title = isNotFound ? 'Página no encontrada | Dr. Edwin García Garrido' : (metadata?.title || DEFAULT_TITLE)
+    const description = isNotFound ? 'La página solicitada no existe o cambió de ubicación.' : (metadata?.description || DEFAULT_DESCRIPTION)
 
     document.title = title
     setMeta('description', description)
+    setMeta('robots', isNotFound ? 'noindex, follow' : 'index, follow')
     setMeta('og:title', title, true)
     setMeta('og:description', description, true)
     setMeta('og:locale', 'es_MX', true)
