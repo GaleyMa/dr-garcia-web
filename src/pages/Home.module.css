@@ -3,7 +3,7 @@
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(10, 61, 74, .96) 0%, rgba(10, 61, 74, .88) 42%, rgba(10, 61, 74, .48) 70%, rgba(10, 61, 74, .30) 100%),
-    url("/fondo-inicio.jpg") center / cover no-repeat;
+    url("/fondo-inicio.webp") center / cover no-repeat;
   color: white;
 }
 
@@ -508,4 +508,13 @@
 
   .ctaGrid { grid-template-columns: 1fr; gap: 2rem; }
   .ctaBoton { justify-self: start; }
+}
+
+
+@media (max-width: 600px) {
+  .hero {
+    background-image:
+      linear-gradient(90deg, rgba(10, 61, 74, .96) 0%, rgba(10, 61, 74, .88) 42%, rgba(10, 61, 74, .48) 70%, rgba(10, 61, 74, .30) 100%),
+      url("/fondo-inicio-mobile.webp");
+  }
 }
