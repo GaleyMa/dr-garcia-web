@@ -66,19 +66,21 @@ function GallbladderSurgery() {
             <h2>Del diagnóstico a las alternativas de manejo</h2>
           </div>
 
-          <div className={styles.editorialInfoGrid}>
+          <div className={styles.clinicalPath}>
+            <span className={styles.pathLine} aria-hidden="true" />
             <article>
-              <span>01</span>
+              <div className={styles.pathMarker}><i /><span>01</span></div>
               <h3>¿Cómo se estudian los problemas de la vesícula?</h3>
               <p>La valoración comienza con los síntomas y antecedentes del paciente. Según el caso, el médico puede revisar o solicitar estudios de imagen y análisis de laboratorio. El ultrasonido abdominal es uno de los estudios utilizados para identificar cálculos y valorar la vesícula.</p>
             </article>
-            <article>
-              <span>02</span>
+            <article className={styles.pathFocus}>
+              <div className={styles.pathMarker}><i /><span>02</span></div>
+              <span className={styles.pathLabel}>Decisión individual</span>
               <h3>¿Cuándo puede considerarse una cirugía?</h3>
               <p>Encontrar cálculos en la vesícula no significa automáticamente que una persona necesite una operación. La indicación quirúrgica depende de los síntomas, los hallazgos de los estudios, posibles complicaciones y las características de cada paciente.</p>
             </article>
             <article>
-              <span>03</span>
+              <div className={styles.pathMarker}><i /><span>03</span></div>
               <h3>¿Qué es una colecistectomía?</h3>
               <p>La colecistectomía es la cirugía para retirar la vesícula biliar. El abordaje laparoscópico es una técnica utilizada habitualmente cuando está indicada, pero el procedimiento apropiado debe decidirse de manera individual después de la valoración.</p>
             </article>
